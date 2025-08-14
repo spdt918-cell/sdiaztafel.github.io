@@ -2,171 +2,157 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sebastian Diaz‑Tafel — Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body { color:#111; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans"; }
-    header nav { display:flex; gap:1rem; padding:12px 16px; }
-    header nav a { color:#fff; font-weight:600; text-decoration:none; }
-    header nav a:hover { text-decoration:underline; }
-    .shell { max-width:1100px; margin:0 auto; padding:0 12px; }
-    section { margin:28px 0; }
-    h1,h2 { margin-bottom:10px; }
-    .lead { color:#555; margin:0 0 14px 0; }
-    .grid { display:grid; gap:14px; grid-template-columns: repeat(12, 1fr); }
-    .card { grid-column: span 12; background:whitesmoke; border:3px solid gray; border-radius:12px; padding:12px; }
-    .card strong { display:block; margin-bottom:4px; }
-    .card p { margin:6px 0 0 0; color:#333; }
-    .pill { display:inline-block; font-size:.8rem; padding:2px 8px; border:1px solid gray; border-radius:999px; margin-left:6px; background:#fff; }
-    .gallery { display:grid; gap:12px; grid-template-columns: repeat(12, 1fr); }
-    figure { grid-column: span 12; margin:0; }
-    figure img { width:100%; height:240px; object-fit:cover; border:1px solid gray; border-radius:10px; background:#fff; }
-    figure figcaption { font-size:.9rem; color:#444; margin-top:6px; }
-    @media (min-width:720px){ .card{grid-column: span 6;} figure{grid-column: span 6;} }
-    @media (min-width:1040px){ .card{grid-column: span 4;} figure{grid-column: span 4;} }
-    footer { color:#333; text-align:center; background:whitesmoke; border:3px solid gray; border-radius:10px; padding:14px; margin:36px 0 50px; }
-  </style>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Sebastian Diaz‑Tafel</title>
+  <link rel="stylesheet" href="site.css" />
 </head>
 <body>
-  <header class="shell">
-    <nav aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="#tech">Tech</a>
-      <a href="#business">Business</a>
-      <a href="#finance">Finance</a>
-      <a href="#intl">International</a>
-      <a href="#writing">Writing</a>
-      <a href="#service">Service</a>
-      <span style="margin-left:auto;"></span>
-      <a href="secondpage.html">AI Page</a>
-      <a href="references.html">AI References</a>
-    </nav>
-  </header>
+  <div class="container">
+    <header class="site-header">
+      <nav class="nav">
+        <div class="brand">
+          <img src="LinkedIn_Handshake_Headshot_Cropped.jpg" alt="Sebastian headshot" />
+          <span>Portfolio</span>
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="portfolio.html">Portfolio</a></li>
+          <li><a href="mailto:spdt918@gmail.com">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main class="shell">
-    <h1>Portfolio</h1>
-    <p class="lead">Curated projects across business, marketing, finance, web, and international affairs. Files open in a new tab.</p>
+    <main>
+      <!-- FEATURED -->
+      <section class="section">
+        <h1 class="h1">Selected Work</h1>
+        <div class="card-grid">
+          <article class="card">
+            <h3>AI in Business & Ethics — Website</h3>
+            <p class="meta">Educational site with clear write‑ups and simple demos.</p>
+            <div class="actions">
+              <a class="chip" href="secondpage.html">Open site</a>
+            </div>
+          </article>
 
-    <!-- Tech -->
-    <section id="tech">
-      <h2>Tech Projects</h2>
-      <div class="grid">
-        <article class="card">
-          <strong>AI Website Project <span class="pill">Web</span></strong>
-          <p><a href="index.html" target="_blank" rel="noopener">New site is here</a> • Legacy AI pages: <a href="secondpage.html">content</a> and <a href="references.html">references</a>. Built with HTML/CSS.</p>
-        </article>
-      </div>
-    </section>
+          <article class="card">
+            <h3>StudyUp — Startup Business Plan</h3>
+            <p class="meta">TAM, competitor analysis, pricing, projections.</p>
+            <div class="actions">
+              <a class="chip" href="StudyUpBusinessPlan.pdf">Open PDF</a>
+            </div>
+          </article>
 
-    <!-- Business and Marketing -->
-    <section id="business">
-      <h2>Business and Marketing</h2>
-      <div class="grid">
-        <article class="card">
-          <strong>StudyUp — Startup Business Plan <span class="pill">Strategy</span></strong>
-          <p><a href="StudyUpBusinessPlan.pdf" target="_blank" rel="noopener">Open PDF</a> — Market sizing, competitor analysis, pricing, and projections for a student study app.</p>
-        </article>
+          <article class="card">
+            <h3>“Know The Feeling” — ESPN Campaign</h3>
+            <p class="meta">Positioning, creator strategy, content plan.</p>
+            <div class="actions">
+              <a class="chip" href="SDT_KnowTheFeeling_MarketingCampaign.docx">Campaign (DOCX)</a>
+            </div>
+          </article>
 
-        <article class="card">
-          <strong>“Know The Feeling” — ESPN Marketing Campaign <span class="pill">Campaign</span></strong>
-          <p><a href="SDT_KnowTheFeeling_MarketingCampaign.docx" target="_blank" rel="noopener">Open DOCX</a> — Social‑first campaign targeting younger NFL viewers with creator‑led content.</p>
-        </article>
+          <article class="card">
+            <h3>Construction Company — Accounting Project</h3>
+            <p class="meta">Breakeven, competitor scan, pricing & margin targets.</p>
+            <div class="actions">
+              <a class="chip" href="ACT223%20Construction%20Company.pptx">Slides (PPTX)</a>
+            </div>
+          </article>
 
-        <article class="card">
-          <strong>Xbox Series S — Marketing Strategy <span class="pill">Marketing</span></strong>
-          <p><a href="SDT_XboxS_Final.pdf" target="_blank" rel="noopener">Open PDF</a> — Target market, SWOT, competitor comparison, placement, pricing, and promotion.</p>
-        </article>
+          <article class="card">
+            <h3>Lockheed Martin — 10‑K Mini Analysis</h3>
+            <p class="meta">Balance‑sheet movements, ratios, implications.</p>
+            <div class="actions">
+              <a class="chip" href="10k%20analysis%20of%20Lockheed%20Martin%20(1).docx">Report (DOCX)</a>
+            </div>
+          </article>
 
-        <article class="card">
-          <strong>ACT223 Construction Company Project <span class="pill">Accounting</span></strong>
-          <p><a href="ACT223 Construction Company.pptx" target="_blank" rel="noopener">Open PPTX</a> — Budgeting, breakeven, and competitive positioning for a simulated contractor in Houston.</p>
-        </article>
-      </div>
-    </section>
+          <article class="card">
+            <h3>Japan’s Lost Decades — ECON</h3>
+            <p class="meta">Macroeconomic analysis of the 1990s crisis and policy responses.</p>
+            <div class="actions">
+              <a class="chip" href="ECN330%20Project%20(1).docx">Paper</a>
+              <a class="chip" href="Econ%20Final%20Project_%20Japan.pptx">Slides</a>
+            </div>
+          </article>
 
-    <!-- Finance -->
-    <section id="finance">
-      <h2>Finance and Analysis</h2>
-      <div class="grid">
-        <article class="card">
-          <strong>Lockheed Martin 10‑K Mini Analysis <span class="pill">Finance</span></strong>
-          <p><a href="10k analysis of Lockheed Martin (1).docx" target="_blank" rel="noopener">Open DOCX</a> — Year‑over‑year balance sheet movements and implications, with ratio highlights.</p>
-        </article>
-      </div>
-    </section>
+          <article class="card">
+            <h3>INTS — Drug Cartels, Border Security & Migration</h3>
+            <p class="meta">Interdisciplinary research (history, anthro, poli‑sci).</p>
+            <div class="actions">
+              <a class="chip" href="INTS%20Final%20Paper%20%20(1).docx">Paper</a>
+              <a class="chip" href="English%20Presentation.pptx">English project slides</a>
+            </div>
+          </article>
+        </div>
+      </section>
 
-    <!-- International Affairs and Economics -->
-    <section id="intl">
-      <h2>International Affairs and Economics</h2>
-      <div class="grid">
-        <article class="card">
-          <strong>INTS — Cartels, Border Security, and Migration <span class="pill">Research</span></strong>
-          <p><a href="INTS Final Paper  (1).docx" target="_blank" rel="noopener">Open DOCX</a> — Interdisciplinary paper on cartel dynamics and border policy.</p>
-        </article>
+      <!-- WRITING -->
+      <section class="section">
+        <h2 class="h2">Writing Samples</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Problem/Solution — College Mental Health</h3>
+            <p class="meta">Research‑backed proposal combining counseling, peer support, and tech.</p>
+            <div class="actions">
+              <a class="chip" href="Problem%20Solution%20Final%20Draft.docx">Open DOCX</a>
+            </div>
+          </article>
+          <article class="card">
+            <h3>Free Speech, Limits, & Censorship</h3>
+            <p class="meta">Short essay on speech, power, and historical record.</p>
+            <div class="actions">
+              <a class="chip" href="Free%20Speech,%20Limits,%20and%20Censorship.docx">Open DOCX</a>
+            </div>
+          </article>
+          <article class="card">
+            <h3>Green Cleaners — Lab Report</h3>
+            <p class="meta">Testing a homemade cleaner vs. Windex.</p>
+            <div class="actions">
+              <a class="chip" href="Green%20Cleaners%20Lab%20Report.docx">Open DOCX</a>
+            </div>
+          </article>
+          <article class="card">
+            <h3>ENG105 — Personal Narrative</h3>
+            <p class="meta">Reflective piece on cross‑cultural learning and growth.</p>
+            <div class="actions">
+              <a class="chip" href="ENG105%20Personal%20Narrative.docx">Open DOCX</a>
+            </div>
+          </article>
+        </div>
+      </section>
 
-        <article class="card">
-          <strong>English Presentation — Mexican Drug Cartels <span class="pill">Slides</span></strong>
-          <p><a href="English Presentation.pptx" target="_blank" rel="noopener">Open PPTX</a> — Media, economics, and state interactions around cartels.</p>
-        </article>
+      <!-- SERVICE -->
+      <section id="service-full" class="section">
+        <h2 class="h2">Service & Community</h2>
+        <div class="card">
+          <h3>British Virgin Islands — Sunshade Repair & Animal Rescue</h3>
+          <p class="meta">Repaired a beach sunshade structure; assisted local rescue with puppy de‑ticking and care.</p>
+          <div class="gallery">
+            <img src="BVI%20Sunshade%20Work.jpeg" alt="Carrying beam for BVI sunshade repair">
+            <img src="BVI%20Work%201.jpeg" alt="Staging boards for cuts on BVI site">
+            <img src="BVI%20Work%203.jpeg" alt="Measurement and layout work on BVI slab">
+            <img src="DetickingPups.jpeg" alt="De‑ticking puppies as part of animal rescue">
+            <img src="Puppies%201.jpg" alt="Socializing a litter of rescue puppies">
+          </div>
+        </div>
 
-        <article class="card">
-          <strong>ECON Final Project — Japan’s Lost Decade <span class="pill">Slides</span></strong>
-          <p><a href="Econ Final Project_ Japan.pptx" target="_blank" rel="noopener">Open PPTX</a> — Macro indicators, causes of the 1990s crisis, and policy responses.</p>
-        </article>
-      </div>
-    </section>
+        <div class="card" style="margin-top:16px">
+          <h3>Dominican Republic — Daycare / Primary Education Center</h3>
+          <p class="meta">Helped build and run a community day‑camp & education center; taught beginner English and organized activities.</p>
+          <div class="gallery">
+            <img src="DR%20Daycamp%20teaching.jpeg" alt="Teaching vocabulary at DR center">
+            <img src="DR%20DayCamp%201.jpeg" alt="Working with kids outdoors at day camp">
+            <img src="DR%20camp%202.JPG" alt="Classroom session and mural area at DR site">
+          </div>
+        </div>
+      </section>
+    </main>
 
-    <!-- Writing -->
-    <section id="writing">
-      <h2>Writing Samples</h2>
-      <p class="lead">Pieces tied to psychology, sustainability, and argumentation.</p>
-      <div class="grid">
-        <article class="card">
-          <strong>Problem/Solution — College Mental Health Crisis <span class="pill">Psych</span></strong>
-          <p><a href="Problem Solution Final Draft.docx" target="_blank" rel="noopener">Open DOCX</a> — Research‑backed proposal combining counseling, peer support, and tech.</p>
-        </article>
-
-        <article class="card">
-          <strong>Green Cleaners Lab Report <span class="pill">Sustainability</span></strong>
-          <p><a href="Green Cleaners Lab Report.docx" target="_blank" rel="noopener">Open DOCX</a> — Experimental write‑up comparing a homemade cleaner vs Windex.</p>
-        </article>
-
-        <article class="card">
-          <strong>Free Speech, Limits, and Censorship <span class="pill">Argument</span></strong>
-          <p><a href="Free Speech, Limits, and Censorship.docx" target="_blank" rel="noopener">Open DOCX</a> — Essay on speech, state power, and the historical record.</p>
-        </article>
-
-        <article class="card">
-          <strong>ENG105 Personal Narrative <span class="pill">Narrative</span></strong>
-          <p><a href="ENG105 Personal Narrative.docx" target="_blank" rel="noopener">Open DOCX</a> — Reflective piece on cross‑cultural learning and growth.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Service -->
-    <section id="service">
-      <h2>Service and Community</h2>
-      <p class="lead">British Virgin Islands and Dominican Republic — construction assistance, day camps, and animal rescue.</p>
-      <div class="gallery">
-        <figure>
-          <img src="BVI Work 1.jpeg" alt="BVI crew lifting and staging boards for cuts" />
-          <figcaption>British Virgin Islands — post‑hurricane rebuild tasks with a small volunteer crew.</figcaption>
-        </figure>
-        <figure>
-          <img src="DetickingPups.jpeg" alt="De‑ticking a rescued puppy" />
-          <figcaption>Animal rescue — de‑ticking and transport coordination for strays.</figcaption>
-        </figure>
-        <figure>
-          <img src="DR DayCamp 1.jpeg" alt="Helping a camper during outdoor activities in the DR" />
-          <figcaption>Dominican Republic — day camps and beginner English activities.</figcaption>
-        </figure>
-      </div>
-    </section>
-  </main>
-
-  <footer class="shell">
-    <p>© 2025 Sebastian Diaz‑Tafel</p>
-  </footer>
+    <footer class="site-footer">
+      © <span id="y"></span> Sebastian Diaz‑Tafel • <a href="mailto:spdt918@gmail.com">spdt918@gmail.com</a>
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
