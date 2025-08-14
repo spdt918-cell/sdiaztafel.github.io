@@ -3,90 +3,129 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sebastian Diaz‑Tafel — Home</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Sebastian Diaz‑Tafel | International Business · Data · Public Service</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <style>
-    body { color:#111; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans"; }
-    header nav { display:flex; gap:1rem; padding:12px 16px; }
-    header nav a { color:#fff; font-weight:600; text-decoration:none; }
-    header nav a:hover { text-decoration:underline; }
-    .shell { max-width:1100px; margin:0 auto; padding:0 12px; }
-    .hero { display:grid; grid-template-columns: 160px 1fr; gap:16px; align-items:center; margin:22px 0; background:whitesmoke; border:3px solid gray; border-radius:12px; padding:16px; }
-    .hero img { width:160px; height:160px; border-radius:50%; object-fit:cover; border:3px solid gray; background:#fff; }
-    .hero h1 { margin:0 0 6px 0; font-size:1.8rem; }
-    .hero p { margin:6px 0; line-height:1.5; }
-    .cta { display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
-    .btn { display:inline-block; padding:10px 14px; border:2px solid #111; border-radius:10px; background:#fff; text-decoration:none; font-weight:600; }
-    section { margin:28px 0; }
-    .teasers { display:grid; gap:14px; grid-template-columns: repeat(12, 1fr); }
-    .card { grid-column: span 12; background:whitesmoke; border:3px solid gray; border-radius:12px; padding:12px; }
-    .card strong { display:block; margin-bottom:4px; }
-    .card p { margin:6px 0 0 0; color:#333; }
-    @media (min-width:720px){ .card{grid-column: span 6;} }
-    @media (min-width:1040px){ .card{grid-column: span 4;} }
-    footer { color:#333; text-align:center; background:whitesmoke; border:3px solid gray; border-radius:10px; padding:14px; margin:36px 0 50px; }
+    :root{
+      --bg:#0b0b0c; --card:#111215; --ink:#e8e8ea; --muted:#a7a7ad; --accent:#64d2ff; --line:#22242a;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0}
+    .brand{font-weight:700;letter-spacing:.3px}
+    nav{display:flex;gap:16px;align-items:center}
+    .btn{display:inline-block;padding:10px 16px;border:1px solid var(--line);border-radius:12px;background:transparent;color:var(--ink)}
+    .btn.primary{background:var(--accent);color:#06131a;border-color:transparent;font-weight:600}
+    .grid{display:grid;gap:18px}
+    .hero{display:grid;grid-template-columns:120px 1fr;gap:18px;padding:22px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(160deg,#0f1116, #0b0c10)}
+    .hero img{width:120px;height:120px;border-radius:50%;object-fit:cover;border:2px solid var(--line);background:#000}
+    .muted{color:var(--muted)}
+    h1{margin:4px 0 6px;font-size:28px;line-height:1.2}
+    h2{margin:24px 0 10px;font-size:20px}
+    .cards{grid-template-columns:repeat(12,1fr)}
+    .card{grid-column:span 12;padding:18px;border:1px solid var(--line);background:var(--card);border-radius:14px}
+    .card h3{margin:0 0 6px;font-size:18px}
+    .pill{display:inline-flex;gap:6px;flex-wrap:wrap}
+    .tag{padding:4px 8px;border:1px solid var(--line);border-radius:999px;font-size:12px;color:var(--muted)}
+    .split{display:grid;grid-template-columns:1fr;gap:18px}
+    footer{margin:28px 0 10px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+    @media (min-width:720px){
+      .hero{grid-template-columns:140px 1fr}
+      .cards .card{grid-column:span 4}
+      .split{grid-template-columns:1.2fr .8fr}
+    }
   </style>
 </head>
 <body>
-  <header class="shell">
-    <nav aria-label="Primary">
-      <a href="portfolio.html">Portfolio</a>
-      <a href="portfolio.html#writing">Writing</a>
-      <a href="portfolio.html#service">Service</a>
-      <a href="#contact">Contact</a>
-      <span style="margin-left:auto;"></span>
-      <a href="secondpage.html">AI Page</a>
-      <a href="references.html">AI References</a>
-    </nav>
-  </header>
+  <div class="wrap">
 
-  <main class="shell">
-    <section class="hero" id="home">
-      <img src="LinkedIn_Handshake_Headshot_Cropped.jpg" alt="Headshot of Sebastian Diaz‑Tafel" />
+    <!-- Top Nav -->
+    <header>
+      <div class="brand">Sebastian Diaz‑Tafel</div>
+      <nav>
+        <a href="portfolio.html" class="btn primary">Portfolio</a>
+        <a href="mailto:spdt918@gmail.com" class="btn">Email</a>
+        <a href="Sebastian_DiazTafel_Resume.pdf" class="btn">Resume</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <!-- Save your headshot at /images/headshot.jpg -->
+      <img src="images/headshot.jpg" alt="Sebastian Diaz‑Tafel headshot" />
       <div>
-        <h1>Sebastian Diaz‑Tafel</h1>
-        <p>I’m an International Business student at CU Denver with a minor in Psychology, focused on the intersection of global strategy, data analysis, and public service. I approach complex systems in business, government, and community settings with a mindset grounded in structure, curiosity, and cross‑cultural understanding.</p>
-        <p>My experience includes GIS mapping for economic development, managing lifeguard teams in high‑pressure environments, and international service projects in the Dominican Republic and British Virgin Islands. I’m fluent in English and Spanish.</p>
-        <p>I’m interested in roles that bring together international business, cybersecurity, intelligence, and public service. Open to internships or part‑time roles on mission‑driven teams.</p>
-        <div class="cta">
-          <a class="btn" href="portfolio.html">View Portfolio</a>
-          <a class="btn" href="portfolio.html#service">Service Work</a>
-          <a class="btn" href="#contact">Contact</a>
+        <h1>International Business × Data × Public Service</h1>
+        <p class="muted">
+          CU Denver International Business student (Psych minor) focused on the intersection of global strategy, data analysis, and public service. I’ve worked on GIS mapping for economic development, led lifeguard teams in high‑pressure settings, and contributed to international service projects in the Dominican Republic and British Virgin Islands. Bilingual (English/Spanish).
+        </p>
+        <p class="muted">
+          Interested in roles that blend international business, cybersecurity, intelligence, and service. Seeking internships/part‑time roles on mission‑driven teams.
+        </p>
+        <div class="pill">
+          <span class="tag">ArcGIS</span><span class="tag">Excel</span><span class="tag">HTML/CSS</span><span class="tag">Leadership</span><span class="tag">Spanish/English</span>
         </div>
       </div>
     </section>
 
-    <section>
-      <h2>Highlights</h2>
-      <div class="teasers">
-        <article class="card">
-          <strong>StudyUp — Business Plan</strong>
-          <p>Market sizing, competitor landscape, pricing, and financial projections for a student study app.</p>
-        </article>
-        <article class="card">
-          <strong>Xbox Series S — Marketing Strategy</strong>
-          <p>Target market, SWOT, competitor comparison, placement, pricing, and promotion.</p>
-        </article>
-        <article class="card">
-          <strong>INTS — Cartels, Border Security, Migration</strong>
-          <p>Interdisciplinary analysis across politics, history, and policy.</p>
-        </article>
-      </div>
-      <p style="margin-top:10px;"><a class="btn" href="portfolio.html">See all projects</a></p>
+    <!-- Featured Projects -->
+    <h2>Featured Projects</h2>
+    <section class="grid cards">
+      <article class="card">
+        <h3>Downtown Vacancy Mapping (GIS)</h3>
+        <p class="muted">Analyzed 300+ properties in Denver’s core to identify vacancy hot spots and support targeted business attraction.</p>
+        <div class="pill"><span class="tag">ArcGIS</span><span class="tag">Excel</span><span class="tag">Data Viz</span></div>
+      </article>
+
+      <article class="card">
+        <h3>AI in Business & Ethics Website</h3>
+        <p class="muted">Co‑built an educational site explaining practical AI use, automation, and ethics with demos and sources.</p>
+        <div class="pill"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+        <p><a href="secondpage.html">View site</a> · <a href="portfolio.html#web">See details</a></p>
+      </article>
+
+      <article class="card">
+        <h3>Japan’s “Lost Decade” — Research & Slides</h3>
+        <p class="muted">Macroeconomic analysis of Japan’s 1990s crisis with policy review and outcomes.</p>
+        <div class="pill"><span class="tag">Economics</span><span class="tag">Policy</span></div>
+        <p><a href="ECN330 Project (1).docx">Read paper</a> · <a href="Econ Final Project_ Japan.pptx">View slides</a></p>
+      </article>
+
+      <article class="card">
+        <h3>Construction Co. Financials (Acct. Project)</h3>
+        <p class="muted">Team project modeling breakeven, margins, and market context for a Houston builder.</p>
+        <div class="pill"><span class="tag">Accounting</span><span class="tag">Finance</span></div>
+        <p><a href="ACT223 Construction Company.pptx">View deck</a></p>
+      </article>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
+    <!-- Split: Service + Writing -->
+    <section class="split">
       <div class="card">
-        <p>Email: <a href="mailto:spdt918@gmail.com">spdt918@gmail.com</a></p>
-        <p>LinkedIn: <a href="#" aria-label="Add your LinkedIn URL">Add your LinkedIn URL</a></p>
-        <p>Resume: <a href="#" aria-label="Add your resume PDF">Add your resume PDF</a></p>
+        <h2>Service & Impact</h2>
+        <p class="muted">Hands‑on work in the Dominican Republic and British Virgin Islands: classroom support, day‑camp instruction, post‑hurricane rebuilding, and animal rescue/rehab.</p>
+        <p><a href="portfolio.html#service">See photos & certifications</a></p>
+      </div>
+
+      <div class="card">
+        <h2>Writing & Research</h2>
+        <ul class="muted" style="margin:0;padding-left:18px">
+          <li><a href="INTS Final Paper  (1).docx">The Impact of Drug Cartels on Border Security & Migration</a> (INTS)</li>
+          <li><a href="English Presentation.pptx">Drug Cartels — Media & Political Economy (slides)</a></li>
+          <li><a href="Problem Solution Final Draft.docx">College Mental‑Health: Multi‑level Solutions</a></li>
+          <li><a href="10k analysis of Lockheed Martin (1).docx">10‑K Analysis: Lockheed Martin</a></li>
+          <li><a href="SDT_KnowTheFeeling_MarketingCampaign.docx">“Know the Feeling” — ESPN Campaign</a></li>
+        </ul>
       </div>
     </section>
-  </main>
 
-  <footer class="shell">
-    <p>© 2025 Sebastian Diaz‑Tafel</p>
-  </footer>
+    <footer>
+      <div>© <span id="y"></span> Sebastian Diaz‑Tafel • <a href="mailto:spdt918@gmail.com">spdt918@gmail.com</a> • <a href="portfolio.html">Portfolio</a></div>
+    </footer>
+  </div>
+
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
