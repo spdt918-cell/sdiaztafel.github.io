@@ -1,43 +1,92 @@
-<section class="hero wrap">
-  <h1>Hi, I’m <span>Sebastian Diaz‑Tafel</span></h1>
-  <p>International Business student with a minor in Psychology at CU Denver, building skills in data analysis, cybersecurity fundamentals, and economic research. Experienced with ArcGIS, Excel, and HTML; comfortable translating data into decisions. Bilingual in English and Spanish.</p>
-  <div class="cta">
-    <a class="btn" href="resume.pdf" target="_blank" rel="noopener">View Resume</a>
-    <a class="btn ghost" href="mailto:hello@sdiaztafel.com">Email Me</a>
-  </div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sebastian Diaz‑Tafel — Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { color:#111; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans"; }
+    header nav { display:flex; gap:1rem; padding:12px 16px; }
+    header nav a { color:#fff; font-weight:600; text-decoration:none; }
+    header nav a:hover { text-decoration:underline; }
+    .shell { max-width:1100px; margin:0 auto; padding:0 12px; }
+    .hero { display:grid; grid-template-columns: 160px 1fr; gap:16px; align-items:center; margin:22px 0; background:whitesmoke; border:3px solid gray; border-radius:12px; padding:16px; }
+    .hero img { width:160px; height:160px; border-radius:50%; object-fit:cover; border:3px solid gray; background:#fff; }
+    .hero h1 { margin:0 0 6px 0; font-size:1.8rem; }
+    .hero p { margin:6px 0; line-height:1.5; }
+    .cta { display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
+    .btn { display:inline-block; padding:10px 14px; border:2px solid #111; border-radius:10px; background:#fff; text-decoration:none; font-weight:600; }
+    section { margin:28px 0; }
+    .teasers { display:grid; gap:14px; grid-template-columns: repeat(12, 1fr); }
+    .card { grid-column: span 12; background:whitesmoke; border:3px solid gray; border-radius:12px; padding:12px; }
+    .card strong { display:block; margin-bottom:4px; }
+    .card p { margin:6px 0 0 0; color:#333; }
+    @media (min-width:720px){ .card{grid-column: span 6;} }
+    @media (min-width:1040px){ .card{grid-column: span 4;} }
+    footer { color:#333; text-align:center; background:whitesmoke; border:3px solid gray; border-radius:10px; padding:14px; margin:36px 0 50px; }
+  </style>
+</head>
+<body>
+  <header class="shell">
+    <nav aria-label="Primary">
+      <a href="portfolio.html">Portfolio</a>
+      <a href="portfolio.html#writing">Writing</a>
+      <a href="portfolio.html#service">Service</a>
+      <a href="#contact">Contact</a>
+      <span style="margin-left:auto;"></span>
+      <a href="secondpage.html">AI Page</a>
+      <a href="references.html">AI References</a>
+    </nav>
+  </header>
 
-<section id="projects" class="wrap">
-  <h2>Projects</h2>
-  <div class="grid">
-    <article>
-      <h3>Downtown Vacancy Mapping</h3>
-      <p>Analyzed 300+ properties across Denver’s core to identify vacancy hotspots and support targeted business attraction.</p>
-      <ul><li>Tools: ArcGIS, Excel</li><li>Focus: Data visualization & urban analysis</li></ul>
-    </article>
-    <article>
-      <h3>AI in Business & Ethics Site</h3>
-      <p>Co‑built a site explaining practical AI use, automation, and ethics with simple demos and sources.</p>
-      <ul><li>Tools: HTML, CSS, JavaScript</li><li>Focus: Emerging tech & responsible use</li></ul>
-    </article>
-    <article>
-      <h3>Operations & Safety Leadership</h3>
-      <p>Led high‑traffic pool operations and training; documented SOPs and compliance checks that improved team execution.</p>
-      <ul><li>Skills: Leadership, risk awareness</li></ul>
-    </article>
-  </div>
-</section>
+  <main class="shell">
+    <section class="hero" id="home">
+      <img src="LinkedIn_Handshake_Headshot_Cropped.jpg" alt="Headshot of Sebastian Diaz‑Tafel" />
+      <div>
+        <h1>Sebastian Diaz‑Tafel</h1>
+        <p>I’m an International Business student at CU Denver with a minor in Psychology, focused on the intersection of global strategy, data analysis, and public service. I approach complex systems in business, government, and community settings with a mindset grounded in structure, curiosity, and cross‑cultural understanding.</p>
+        <p>My experience includes GIS mapping for economic development, managing lifeguard teams in high‑pressure environments, and international service projects in the Dominican Republic and British Virgin Islands. I’m fluent in English and Spanish.</p>
+        <p>I’m interested in roles that bring together international business, cybersecurity, intelligence, and public service. Open to internships or part‑time roles on mission‑driven teams.</p>
+        <div class="cta">
+          <a class="btn" href="portfolio.html">View Portfolio</a>
+          <a class="btn" href="portfolio.html#service">Service Work</a>
+          <a class="btn" href="#contact">Contact</a>
+        </div>
+      </div>
+    </section>
 
-<section id="experience" class="wrap">
-  <h2>Experience</h2>
-  <ul class="list">
-    <li><strong>Economic Development Intern – Downtown Denver Partnership</strong>: Produced weekly vacancy reports, improved listing accuracy by 35%, and integrated demographic/foot‑traffic insights.</li>
-    <li><strong>Lifeguard Manager – Fox Chapel Yacht Club</strong>: Managed daily ops, safety standards, and emergency preparedness for a high‑volume facility.</li>
-    <li><strong>Information Systems Project – Chatham University</strong>: Built an educational site on AI tools and ethics; presented research on automation impacts.</li>
-  </ul>
-</section>
+    <section>
+      <h2>Highlights</h2>
+      <div class="teasers">
+        <article class="card">
+          <strong>StudyUp — Business Plan</strong>
+          <p>Market sizing, competitor landscape, pricing, and financial projections for a student study app.</p>
+        </article>
+        <article class="card">
+          <strong>Xbox Series S — Marketing Strategy</strong>
+          <p>Target market, SWOT, competitor comparison, placement, pricing, and promotion.</p>
+        </article>
+        <article class="card">
+          <strong>INTS — Cartels, Border Security, Migration</strong>
+          <p>Interdisciplinary analysis across politics, history, and policy.</p>
+        </article>
+      </div>
+      <p style="margin-top:10px;"><a class="btn" href="portfolio.html">See all projects</a></p>
+    </section>
 
-<section id="about" class="wrap">
-  <h2>About</h2>
-  <p>I like bridging technology, data, and strategy to solve real problems. Recent work spans GIS mapping, operations management, and web fundamentals. Outside class and work, I’m into hiking with my dog Selene, gaming, and learning new tools.</p>
-</section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Email: <a href="mailto:spdt918@gmail.com">spdt918@gmail.com</a></p>
+        <p>LinkedIn: <a href="#" aria-label="Add your LinkedIn URL">Add your LinkedIn URL</a></p>
+        <p>Resume: <a href="#" aria-label="Add your resume PDF">Add your resume PDF</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell">
+    <p>© 2025 Sebastian Diaz‑Tafel</p>
+  </footer>
+</body>
+</html>
