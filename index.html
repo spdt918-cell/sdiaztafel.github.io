@@ -3,118 +3,104 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sebastian Diaz‑Tafel — Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Sebastian Diaz‑Tafel — Home</title>
+  <link rel="stylesheet" href="site.css" />
 </head>
-
 <body>
-  <header class="site-header">
-    <nav class="nav">
-      <a class="brand" href="index.html">SDT</a>
-      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-      <ul class="nav-menu">
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="#service">Service</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="mailto:spdt918@gmail.com">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="container">
+    <header class="site-header">
+      <nav class="nav">
+        <div class="brand">
+          <img src="LinkedIn_Handshake_Headshot_Cropped.jpg" alt="Sebastian Diaz‑Tafel headshot" />
+          <span>Sebastian Diaz‑Tafel</span>
+        </div>
+        <ul>
+          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="#service">Service</a></li>
+          <li><a href="mailto:spdt918@gmail.com">Contact</a></li>
+          <li><a href="secondpage.html">AI Page</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main>
     <!-- HERO -->
     <section class="hero">
-      <div class="hero-inner">
-        <img class="headshot" src="LinkedIn_Handshake_Headshot_Cropped.jpg" alt="Sebastian Diaz‑Tafel headshot" />
-        <div class="hero-copy">
-          <h1>Hi, I’m Sebastian Diaz‑Tafel</h1>
-          <p class="lede">
-            International Business student at CU Denver (Psych minor) exploring the intersection of
-            global strategy, data analysis, and public service. I work across GIS, ops leadership, and research—
-            and I’m fluent in English & Spanish.
-          </p>
-          <div class="hero-cta">
-            <a class="btn primary" href="portfolio.html">View Portfolio</a>
-            <a class="btn" href="StudyUpBusinessPlan.pdf">Download Resume / Samples</a>
-          </div>
+      <img class="headshot" src="LinkedIn_Handshake_Headshot_Cropped.jpg" alt="Sebastian Diaz‑Tafel headshot" />
+      <div>
+        <h1 class="h1">International Business × Data × Public Service</h1>
+        <p class="lede">
+          I’m an International Business student at CU Denver with a minor in Psychology, focused on the intersection of global strategy, data analysis, and public service. I’ve done GIS mapping for economic development, managed lifeguard teams in high‑pressure settings, and contributed to service projects in the Dominican Republic and British Virgin Islands. Bilingual in English and Spanish.
+        </p>
+        <p class="lede">
+          Interested in roles combining international business, cybersecurity, intelligence, and public service.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="portfolio.html">View Portfolio</a>
+          <a class="btn" href="mailto:spdt918@gmail.com">Email Me</a>
+        </div>
+        <div class="pills">
+          <span class="pill">ArcGIS</span><span class="pill">Excel</span><span class="pill">HTML/CSS</span><span class="pill">Leadership</span><span class="pill">Spanish/English</span>
         </div>
       </div>
     </section>
 
-    <!-- HIGHLIGHTS -->
-    <section class="cards">
-      <h2>Selected Highlights</h2>
+    <!-- FEATURED -->
+    <section class="section">
+      <h2 class="h2">Featured</h2>
       <div class="card-grid">
         <article class="card">
-          <h3>Downtown Vacancy Mapping</h3>
-          <p>Analyzed 300+ properties in Denver’s core to identify vacancy hot spots and support business attraction.</p>
-          <p class="meta">Tools: ArcGIS, Excel · Focus: Data viz & urban analysis</p>
+          <h3>StudyUp — Startup Business Plan</h3>
+          <p class="meta">Market sizing, pricing, competitor analysis, and projections for a study‑partner app.</p>
+          <div class="actions">
+            <a class="chip" href="StudyUpBusinessPlan.pdf">Open PDF</a>
+          </div>
         </article>
-
         <article class="card">
-          <h3>AI in Business & Ethics Site</h3>
-          <p>Built a small site explaining practical AI, automation, and ethics with demos/resources.</p>
-          <p class="meta">Tools: HTML, CSS, JavaScript · Focus: Responsible tech</p>
-          <div class="actions"><a class="chip" href="secondpage.html">See an example page →</a></div>
+          <h3>“Know The Feeling” — ESPN Campaign</h3>
+          <p class="meta">Social‑first campaign to engage younger NFL viewers.</p>
+          <div class="actions">
+            <a class="chip" href="SDT_KnowTheFeeling_MarketingCampaign.docx">Campaign (DOCX)</a>
+          </div>
         </article>
-
         <article class="card">
-          <h3>Operations & Safety Leadership</h3>
-          <p>Led high‑traffic lifeguard ops; wrote SOPs & compliance checks that improved team execution.</p>
-          <p class="meta">Skills: Leadership, risk awareness</p>
+          <h3>AI in Business & Ethics Website</h3>
+          <p class="meta">Small site explaining practical AI, automation, and ethics.</p>
+          <div class="actions">
+            <a class="chip" href="secondpage.html">View site</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Japan’s Lost Decades — ECON</h3>
+          <p class="meta">Research paper + slide deck on the 1990s crisis and policy response.</p>
+          <div class="actions">
+            <a class="chip" href="ECN330%20Project%20(1).docx">Paper</a>
+            <a class="chip" href="Econ%20Final%20Project_%20Japan.pptx">Slides</a>
+          </div>
         </article>
       </div>
-      <div class="center">
-        <a class="btn" href="portfolio.html">Browse all projects</a>
-      </div>
     </section>
 
-    <!-- SERVICE PREVIEW -->
-    <section id="service" class="service">
-      <h2>Service & Community Impact</h2>
-      <p class="lede center">
-        Dominican Republic day‑camp teaching & animal rescue · British Virgin Islands post‑hurricane rebuild
-      </p>
-      <div class="gallery-row">
-        <img src="BVI%20Work%204.jpeg" alt="Measuring and setting forms in BVI rebuild" />
-        <img src="DR%20Daycamp%20teaching.jpeg" alt="Teaching English vocabulary at DR day camp" />
-        <img src="DetickingPups.jpeg" alt="De‑ticking puppies during rescue effort" />
-      </div>
-      <div class="center">
-        <a class="btn" href="portfolio.html#service-full">See full gallery</a>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience" class="timeline">
-      <h2>Experience</h2>
-      <div class="timeline-list">
-        <div class="t-item">
-          <h3>Economic Development Intern — Downtown Denver Partnership</h3>
-          <p>Produced weekly vacancy reports; improved listing accuracy and integrated demographic/foot‑traffic insights.</p>
+    <!-- SERVICE TEASER -->
+    <section id="service" class="section">
+      <h2 class="h2">Service & Community Impact</h2>
+      <div class="card">
+        <p class="lede"><strong>British Virgin Islands:</strong> sunshade repair and animal rescue (puppy de‑ticking & care).  
+        <br><strong>Dominican Republic:</strong> building and running a daycare / primary education center (classroom support & activities).</p>
+        <div class="gallery">
+          <img src="BVI%20Sunshade%20Work.jpeg" alt="BVI sunshade repair team carrying beam" />
+          <img src="DetickingPups.jpeg" alt="BVI puppy de‑ticking during rescue effort" />
+          <img src="DR%20Daycamp%20teaching.jpeg" alt="Teaching vocabulary at DR education center" />
         </div>
-        <div class="t-item">
-          <h3>Lifeguard Manager — Fox Chapel Yacht Club</h3>
-          <p>Managed daily ops, safety standards, and preparedness for a high‑volume facility.</p>
-        </div>
-        <div class="t-item">
-          <h3>Information Systems Project — Chatham University</h3>
-          <p>Built an educational site on AI tools & ethics; presented research on automation impacts.</p>
+        <div class="actions" style="margin-top:10px">
+          <a class="btn" href="portfolio.html#service-full">See full gallery</a>
         </div>
       </div>
     </section>
-  </main>
 
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Sebastian Diaz‑Tafel · <a href="mailto:spdt918@gmail.com">spdt918@gmail.com</a></p>
-  </footer>
-
-  <script>
-    // Mobile nav + year
-    document.getElementById('year')?.appendChild(document.createTextNode(new Date().getFullYear()));
-    const toggle = document.querySelector('.nav-toggle');
-    const menu = document.querySelector('.nav-menu');
-    toggle.addEventListener('click', () => menu.classList.toggle('open'));
-  </script>
+    <footer class="site-footer">
+      © <span id="y"></span> Sebastian Diaz‑Tafel • <a href="mailto:spdt918@gmail.com">spdt918@gmail.com</a>
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
