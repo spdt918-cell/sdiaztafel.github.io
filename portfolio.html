@@ -5,6 +5,48 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Portfolio — Sebastian Diaz‑Tafel</title>
   <link rel="stylesheet" href="site.css" />
+  <style>
+    /* minimal additions so the grids look nice even if site.css is simple */
+    .section { padding: 20px 0; }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+      align-items: start;
+    }
+    .card {
+      border: 1px solid #e6e6e6;
+      border-radius: 12px;
+      padding: 14px;
+      background: #fff;
+    }
+    .card h3 { margin: 0 0 6px; font-size: 1.05rem; }
+    .meta { color: #666; font-size: 0.95rem; margin: 0 0 10px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid #ddd;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+    }
+    .doc-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+    .doc-list a { text-decoration: none; }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -28,60 +70,60 @@
         <h1 class="h1">Selected Work</h1>
         <div class="card-grid">
           <article class="card">
-            <h3>AI in Business & Ethics — Website</h3>
-            <p class="meta">Educational site with clear write‑ups and simple demos.</p>
+            <h3>AI in Business & Ethics - Website</h3>
+            <p class="meta">Educational site with clear writeups and simple demos.</p>
             <div class="actions">
-              <a class="chip" href="secondpage.html">Open site</a>
+              <a class="chip" href="webproject/public_html/index.html" target="_blank" rel="noopener">Open site</a>
             </div>
           </article>
 
           <article class="card">
-            <h3>StudyUp — Startup Business Plan</h3>
+            <h3>StudyUp - Startup Business Plan</h3>
             <p class="meta">TAM, competitor analysis, pricing, projections.</p>
             <div class="actions">
-              <a class="chip" href="StudyUpBusinessPlan.pdf">Open PDF</a>
+              <a class="chip" href="docs/study_up_businessplan.pdf" target="_blank" rel="noopener">Open PDF</a>
             </div>
           </article>
 
           <article class="card">
-            <h3>“Know The Feeling” — ESPN Campaign</h3>
+            <h3>"Know The Feeling" - ESPN Campaign</h3>
             <p class="meta">Positioning, creator strategy, content plan.</p>
             <div class="actions">
-              <a class="chip" href="SDT_KnowTheFeeling_MarketingCampaign.docx">Campaign (DOCX)</a>
+              <a class="chip" href="docs/know_the_feeling_marketing_campaign.pdf" target="_blank" rel="noopener">Campaign (PDF)</a>
             </div>
           </article>
 
           <article class="card">
-            <h3>Construction Company — Accounting Project</h3>
-            <p class="meta">Breakeven, competitor scan, pricing & margin targets.</p>
+            <h3>Construction Company - Accounting Project</h3>
+            <p class="meta">Breakeven, competitor scan, pricing and margin targets.</p>
             <div class="actions">
-              <a class="chip" href="ACT223%20Construction%20Company.pptx">Slides (PPTX)</a>
+              <a class="chip" href="docs/construction_company_project.pdf" target="_blank" rel="noopener">Slides (PDF)</a>
             </div>
           </article>
 
           <article class="card">
-            <h3>Lockheed Martin — 10‑K Mini Analysis</h3>
-            <p class="meta">Balance‑sheet movements, ratios, implications.</p>
+            <h3>Lockheed Martin - 10-K Mini Analysis</h3>
+            <p class="meta">Balance sheet movements, ratios, implications.</p>
             <div class="actions">
-              <a class="chip" href="10k%20analysis%20of%20Lockheed%20Martin%20(1).docx">Report (DOCX)</a>
+              <a class="chip" href="docs/10k_analysis_lockheedmartin.pdf" target="_blank" rel="noopener">Report (PDF)</a>
             </div>
           </article>
 
           <article class="card">
-            <h3>Japan’s Lost Decades — ECON</h3>
+            <h3>Japan’s Lost Decades - ECON</h3>
             <p class="meta">Macroeconomic analysis of the 1990s crisis and policy responses.</p>
             <div class="actions">
-              <a class="chip" href="ECN330%20Project%20(1).docx">Paper</a>
-              <a class="chip" href="Econ%20Final%20Project_%20Japan.pptx">Slides</a>
+              <a class="chip" href="docs/ecn330_final_project.pdf" target="_blank" rel="noopener">Paper (PDF)</a>
+              <a class="chip" href="docs/econ_final_japan.pdf" target="_blank" rel="noopener">Slides (PDF)</a>
             </div>
           </article>
 
           <article class="card">
-            <h3>INTS — Drug Cartels, Border Security & Migration</h3>
-            <p class="meta">Interdisciplinary research (history, anthro, poli‑sci).</p>
+            <h3>INTS - Drug Cartels, Border Security and Migration</h3>
+            <p class="meta">Interdisciplinary research (history, anthropology, political science).</p>
             <div class="actions">
-              <a class="chip" href="INTS%20Final%20Paper%20%20(1).docx">Paper</a>
-              <a class="chip" href="English%20Presentation.pptx">English project slides</a>
+              <a class="chip" href="docs/ints_final_project.pdf" target="_blank" rel="noopener">Paper (PDF)</a>
+              <a class="chip" href="docs/english_presentation_drugcartels.pdf" target="_blank" rel="noopener">English project slides (PDF)</a>
             </div>
           </article>
         </div>
@@ -90,62 +132,63 @@
       <!-- WRITING -->
       <section class="section">
         <h2 class="h2">Writing Samples</h2>
-        <div class="card-grid">
-          <article class="card">
-            <h3>Problem/Solution — College Mental Health</h3>
-            <p class="meta">Research‑backed proposal combining counseling, peer support, and tech.</p>
-            <div class="actions">
-              <a class="chip" href="Problem%20Solution%20Final%20Draft.docx">Open DOCX</a>
-            </div>
-          </article>
-          <article class="card">
-            <h3>Free Speech, Limits, & Censorship</h3>
-            <p class="meta">Short essay on speech, power, and historical record.</p>
-            <div class="actions">
-              <a class="chip" href="Free%20Speech,%20Limits,%20and%20Censorship.docx">Open DOCX</a>
-            </div>
-          </article>
-          <article class="card">
-            <h3>Green Cleaners — Lab Report</h3>
-            <p class="meta">Testing a homemade cleaner vs. Windex.</p>
-            <div class="actions">
-              <a class="chip" href="Green%20Cleaners%20Lab%20Report.docx">Open DOCX</a>
-            </div>
-          </article>
-          <article class="card">
-            <h3>ENG105 — Personal Narrative</h3>
-            <p class="meta">Reflective piece on cross‑cultural learning and growth.</p>
-            <div class="actions">
-              <a class="chip" href="ENG105%20Personal%20Narrative.docx">Open DOCX</a>
-            </div>
-          </article>
-        </div>
+        <ul class="doc-list">
+          <li><a href="docs/problem_solution_final_draft.pdf" target="_blank" rel="noopener">Problem/Solution - College Mental Health (PDF)</a></li>
+          <li><a href="docs/freespeech_limits_and_censorship.pdf" target="_blank" rel="noopener">Free Speech, Limits, and Censorship (PDF)</a></li>
+          <li><a href="docs/decomposition_lab_report.pdf" target="_blank" rel="noopener">Green Cleaners - Lab Report (PDF)</a></li>
+          <li><a href="docs/personal_narrative.pdf" target="_blank" rel="noopener">ENG105 - Personal Narrative (PDF)</a></li>
+          <li><a href="docs/theranos_essay.pdf" target="_blank" rel="noopener">Theranos Essay (PDF)</a></li>
+        </ul>
       </section>
 
       <!-- SERVICE -->
       <section id="service-full" class="section">
-        <h2 class="h2">Service & Community</h2>
+        <h2 class="h2">Service and Community</h2>
         <div class="card">
-          <h3>British Virgin Islands — Sunshade Repair & Animal Rescue</h3>
-          <p class="meta">Repaired a beach sunshade structure; assisted local rescue with puppy de‑ticking and care.</p>
+          <h3>British Virgin Islands - Sunshade Repair and Animal Rescue</h3>
+          <p class="meta">Repaired a beach sunshade structure; assisted local rescue with puppy deticking and care.</p>
           <div class="gallery">
-            <img src="BVI%20Sunshade%20Work.jpeg" alt="Carrying beam for BVI sunshade repair">
-            <img src="BVI%20Work%201.jpeg" alt="Staging boards for cuts on BVI site">
-            <img src="BVI%20Work%203.jpeg" alt="Measurement and layout work on BVI slab">
-            <img src="DetickingPups.jpeg" alt="De‑ticking puppies as part of animal rescue">
-            <img src="Puppies%201.jpg" alt="Socializing a litter of rescue puppies">
+            <img src="img/bvi_sunshade_work.jpg" alt="BVI sunshade repair">
+            <img src="img/bvi_sunshade_work2.jpg" alt="BVI sunshade repair - second view">
+            <img src="img/bvi_farm_work.jpg" alt="BVI farm work">
+            <img src="img/bvi_farm_work2.jpg" alt="BVI farm work 2">
+            <img src="img/bvi_farm_work3.jpg" alt="BVI farm work 3">
+            <img src="img/bvi_deticking_pups.jpg" alt="Deticking rescue puppies">
+            <img src="img/bvi_pups.jpg" alt="Rescue puppies">
           </div>
         </div>
 
         <div class="card" style="margin-top:16px">
-          <h3>Dominican Republic — Daycare / Primary Education Center</h3>
-          <p class="meta">Helped build and run a community day‑camp & education center; taught beginner English and organized activities.</p>
+          <h3>Dominican Republic - Daycare / Primary Education Center</h3>
+          <p class="meta">Helped build and run a community day camp and education center; taught beginner English and organized activities.</p>
           <div class="gallery">
-            <img src="DR%20Daycamp%20teaching.jpeg" alt="Teaching vocabulary at DR center">
-            <img src="DR%20DayCamp%201.jpeg" alt="Working with kids outdoors at day camp">
-            <img src="DR%20camp%202.JPG" alt="Classroom session and mural area at DR site">
+            <img src="img/dr_camp_teaching.jpg" alt="Teaching vocabulary at DR center">
+            <img src="img/dr_camp_teaching2.jpg" alt="Teaching at DR center - second view">
+            <img src="img/dr_camp1.jpg" alt="DR day camp 1">
+            <img src="img/dr_camp2.jpg" alt="DR day camp 2">
           </div>
         </div>
+      </section>
+
+      <!-- DOWNLOADS (complete list) -->
+      <section class="section">
+        <h2 class="h2">All Documents (quick access)</h2>
+        <ul class="doc-list">
+          <li><a href="docs/study_up_businessplan.pdf" target="_blank" rel="noopener">Study-Up Business Plan (PDF)</a></li>
+          <li><a href="docs/decomposition_lab_report.pdf" target="_blank" rel="noopener">Decomposition Lab Report (PDF)</a></li>
+          <li><a href="docs/ints_final_project.pdf" target="_blank" rel="noopener">INTS Final Project (PDF)</a></li>
+          <li><a href="docs/10k_analysis_lockheedmartin.pdf" target="_blank" rel="noopener">10-K Analysis - Lockheed Martin (PDF)</a></li>
+          <li><a href="docs/construction_company_project.pdf" target="_blank" rel="noopener">Construction Company Project (PDF)</a></li>
+          <li><a href="docs/ecn330_final_project.pdf" target="_blank" rel="noopener">ECN330 Final Project (PDF)</a></li>
+          <li><a href="docs/know_the_feeling_marketing_campaign.pdf" target="_blank" rel="noopener">"Know the Feeling" Marketing Campaign (PDF)</a></li>
+          <li><a href="docs/freespeech_limits_and_censorship.pdf" target="_blank" rel="noopener">Free Speech: Limits and Censorship (PDF)</a></li>
+          <li><a href="docs/theranos_essay.pdf" target="_blank" rel="noopener">Theranos Essay (PDF)</a></li>
+          <li><a href="docs/econ_final_japan.pdf" target="_blank" rel="noopener">Economics Final - Japan (PDF)</a></li>
+          <li><a href="docs/english_presentation_drugcartels.pdf" target="_blank" rel="noopener">English Presentation - Drug Cartels (PDF)</a></li>
+          <li><a href="docs/personal_narrative.pdf" target="_blank" rel="noopener">Personal Narrative (PDF)</a></li>
+          <li><a href="docs/problem_solution_final_draft.pdf" target="_blank" rel="noopener">Problem/Solution Final Draft (PDF)</a></li>
+          <li><a href="docs/xboxs_final.pdf" target="_blank" rel="noopener">Xbox Series S Final Presentation (PDF)</a></li>
+        </ul>
       </section>
     </main>
 
