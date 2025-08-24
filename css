@@ -37,8 +37,18 @@ a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
 .chip{padding:6px 10px;border:1px solid var(--border);border-radius:999px;background:var(--chip);color:var(--text)}
 
 /* Gallery */
-.gallery{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-.gallery img{width:100%;height:220px;object-fit:cover;border-radius:12px;border:1px solid var(--border)}
+.gallery{
+  display:grid;
+  gap:10px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+}
+.gallery img{
+  width:100%;
+  aspect-ratio:16/10;   /* keeps a consistent tile shape */
+  object-fit:cover;     /* fills the tile without squishing */
+  border-radius:12px;
+  border:1px solid var(--border);
+}
 
 /* Footer */
 .site-footer{border-top:1px solid var(--border);margin-top:30px;padding:18px 0;color:var(--muted);text-align:center}
