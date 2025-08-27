@@ -75,3 +75,7 @@ a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
   .hero{grid-template-columns:1fr;text-align:center}
   .headshot{margin:0 auto}
 }
+
+/* make chip links always clickable and styled consistently */
+.actions { position: relative; }
+.actions .chip { position: relative; z-index: 2; }
