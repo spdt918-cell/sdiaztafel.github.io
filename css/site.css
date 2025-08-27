@@ -55,6 +55,21 @@ a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
 /* Footer */
 .site-footer{border-top:1px solid var(--border);margin-top:30px;padding:18px 0;color:var(--muted);text-align:center}
 
+/* Darken text in Selected Work and Service sections */
+#selected-work .card h3,
+#service-full .card h3 {
+  color: var(--text);       /* stronger headings */
+  font-weight: 700;
+}
+
+#selected-work .card p,
+#selected-work .card .meta,
+#service-full .card p,
+#service-full .card .meta {
+  color: var(--text);       /* stronger body/meta text */
+}
+
+
 /* Responsive */
 @media (max-width:800px){
   .hero{grid-template-columns:1fr;text-align:center}
