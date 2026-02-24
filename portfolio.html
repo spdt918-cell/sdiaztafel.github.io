@@ -4,212 +4,400 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Portfolio — Sebastian Diaz‑Tafel</title>
-<link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="css/site.css" />
   <style>
-    /* minimal additions so the grids look nice even if site.css is simple */
-    .section { padding: 20px 0; }
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 16px;
-      align-items: start;
-    }
-    .card {
-      border: 1px solid #e6e6e6;
-      border-radius: 12px;
-      padding: 14px;
-      background: #fff;
-    }
-    .card h3 { margin: 0 0 6px; font-size: 1.05rem; }
-    .meta { color: #666; font-size: 0.95rem; margin: 0 0 10px; }
-    .actions { display: flex; flex-wrap: wrap; gap: 8px; }
-    .chip {
+    /* ── Section label pills ── */
+    .section-label {
       display: inline-block;
-      padding: 6px 10px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(100,210,255,.1);
+      border: 1px solid rgba(100,210,255,.25);
       border-radius: 999px;
-      border: 1px solid #ddd;
-      text-decoration: none;
-      font-size: 0.9rem;
+      padding: 3px 10px;
+      margin-bottom: 10px;
     }
+
+    /* ── Category group ── */
+    .work-group { margin-bottom: 48px; }
+    .work-group-header {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    .work-group-header h2 { margin: 0; font-size: 20px; }
+    .work-group-header span { color: var(--muted); font-size: .88rem; }
+
+    /* ── Richer project card ── */
+    .card { position: relative; }
+    .card-tags {
+      display: flex; flex-wrap: wrap; gap: 6px;
+      margin: 10px 0 6px;
+    }
+    .tag {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--chip);
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+    .card-story {
+      font-size: .875rem;
+      color: var(--muted);
+      margin: 4px 0 10px;
+      line-height: 1.55;
+    }
+    .card-story strong { color: var(--text); }
+
+    /* ── Writing cards ── */
+    .writing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 14px;
+    }
+    .writing-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+    }
+    .writing-card h3 { font-size: .95rem; margin: 0 0 4px; }
+    .writing-card .meta { font-size: .83rem; color: var(--muted); margin: 0 0 10px; }
+
+    /* ── Service section ── */
+    .service-intro {
+      font-size: .95rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      max-width: 680px;
+      line-height: 1.65;
+    }
+    .service-intro strong { color: var(--text); }
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       margin-top: 10px;
     }
     .gallery img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 10px;
-      display: block;
+      width: 100%; aspect-ratio: 16/10;
+      object-fit: cover; border-radius: 12px;
+      border: 1px solid var(--border);
     }
-    .doc-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
-    .doc-list a { text-decoration: none; }
 
-/* 🔥 Override for dark theme */
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    color: var(--text);
-  }
-
-  .card h3,
-  .card p,
-  .card .meta {
-    color: var(--text);
-  }
-    
+    /* ── Page intro ── */
+    .page-intro {
+      padding: 28px 0 8px;
+      max-width: 640px;
+    }
+    .page-intro h1 { margin: 0 0 8px; }
+    .page-intro p { color: var(--muted); margin: 0; font-size: .95rem; line-height: 1.65; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header class="site-header">
-      <nav class="nav">
-        <div class="brand">
-          <img src="img/headshot.jpg" alt="Sebastian headshot" />
-          <span>Portfolio</span>
-        </div>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a class="active" href="portfolio.html">Portfolio</a></li>
-          <li><a href="mailto:spdt918@gmail.com">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+<div class="container">
 
-    <main>
-      <!-- FEATURED -->
-      <section id="selected-work" class="section">
-  <h1 class="h1">Selected Work</h1>
-        <div class="card-grid">
-          <article class="card">
-            <h3>AI in Business & Ethics - Website</h3>
-            <p class="meta">Educational site with clear writeups and simple demos.</p>
-            <div class="actions">
-              <a class="chip" href="https://spdt918-cell.github.io/webproject/" target="_blank" rel="noopener">Open site</a>
-            </div>
-          </article>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="brand">
+        <img src="img/headshot.jpg" alt="Sebastian headshot" />
+        <span>Sebastian Diaz‑Tafel</span>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="portfolio.html">Portfolio</a></li>
+        <li><a href="mailto:spdt918@gmail.com">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-          <article class="card">
-            <h3>StudyUp - Startup Business Plan</h3>
-            <p class="meta">TAM, competitor analysis, pricing, projections.</p>
-            <div class="actions">
-              <a class="chip" href="docs/study_up_businessplan.pdf" target="_blank" rel="noopener">Open PDF</a>
-            </div>
-          </article>
+  <main>
 
-          <article class="card">
-            <h3>"Know The Feeling" - ESPN Campaign</h3>
-            <p class="meta">Positioning, creator strategy, content plan.</p>
-            <div class="actions">
-              <a class="chip" href="docs/know_the_feeling_marketing_campaign.pdf" target="_blank" rel="noopener">Campaign (PDF)</a>
-            </div>
-          </article>
+    <!-- PAGE INTRO -->
+    <div class="page-intro">
+      <span class="section-label">My Work</span>
+      <h1 class="h1">Portfolio</h1>
+      <p>A collection of projects across business strategy, data analysis, research, and writing —
+         plus community work from the field. Each piece reflects how I think through a problem
+         and communicate what I find.</p>
+    </div>
 
-          <article class="card">
-            <h3>Construction Company - Accounting Project</h3>
-            <p class="meta">Breakeven, competitor scan, pricing and margin targets.</p>
-            <div class="actions">
-              <a class="chip" href="docs/construction_company_project.pdf" target="_blank" rel="noopener">Slides (PDF)</a>
-            </div>
-          </article>
+    <!-- ═══════════════════════════════════════
+         GROUP 1 — Business & Strategy
+    ═══════════════════════════════════════ -->
+    <div class="work-group" id="business">
+      <div class="work-group-header">
+        <span class="section-label">Business &amp; Strategy</span>
+        <span>Building the case, running the numbers, telling the story</span>
+      </div>
+      <div class="card-grid">
 
-          <article class="card">
-            <h3>Lockheed Martin - 10-K Mini Analysis</h3>
-            <p class="meta">Balance sheet movements, ratios, implications.</p>
-            <div class="actions">
-              <a class="chip" href="docs/10k_analysis_lockheedmartin.pdf" target="_blank" rel="noopener">Report (PDF)</a>
-            </div>
-          </article>
+        <article class="card">
+          <h3>StudyUp — Startup Business Plan</h3>
+          <div class="card-tags">
+            <span class="tag">Market Sizing</span>
+            <span class="tag">Pricing</span>
+            <span class="tag">Competitive Analysis</span>
+          </div>
+          <p class="card-story">
+            Built a full go-to-market plan for a study-partner app.
+            <strong>Sized the TAM/SAM/SOM</strong>, modeled three pricing tiers, mapped competitors,
+            and built a 3-year revenue projection. The goal was to make the opportunity feel real and fundable.
+          </p>
+          <div class="actions">
+            <a class="chip" href="docs/study_up_businessplan.pdf" target="_blank" rel="noopener">Business Plan (PDF)</a>
+          </div>
+        </article>
 
-          <article class="card">
-            <h3>Japan’s Lost Decades - ECON</h3>
-            <p class="meta">Macroeconomic analysis of the 1990s crisis and policy responses.</p>
-            <div class="actions">
-              <a class="chip" href="docs/ecn330_final_project.pdf" target="_blank" rel="noopener">Paper (PDF)</a>
-              <a class="chip" href="docs/econ_final_japan.pdf" target="_blank" rel="noopener">Slides (PDF)</a>
-            </div>
-          </article>
+        <article class="card">
+          <h3>"Know The Feeling" — ESPN Campaign</h3>
+          <div class="card-tags">
+            <span class="tag">Brand Strategy</span>
+            <span class="tag">Creator Marketing</span>
+            <span class="tag">Content Planning</span>
+          </div>
+          <p class="card-story">
+            Designed a social-first campaign to bring younger fans into the NFL ecosystem.
+            Developed <strong>audience positioning, a creator partnership strategy,</strong>
+            and a phased content calendar — all rooted in how Gen Z actually consumes sports media.
+          </p>
+          <div class="actions">
+            <a class="chip" href="docs/know_the_feeling_marketing_campaign.pdf" target="_blank" rel="noopener">Campaign (PDF)</a>
+          </div>
+        </article>
 
-          <article class="card">
-            <h3>INTS - Drug Cartels, Border Security and Migration</h3>
-            <p class="meta">Interdisciplinary research (history, anthropology, political science).</p>
-            <div class="actions">
-              <a class="chip" href="docs/ints_final_project.pdf" target="_blank" rel="noopener">Paper (PDF)</a>
-              <a class="chip" href="docs/english_presentation_drugcartels.pdf" target="_blank" rel="noopener">English project slides (PDF)</a>
-            </div>
-          </article>
-        </div>
-      </section>
+        <article class="card">
+          <h3>Construction Company — Accounting Project</h3>
+          <div class="card-tags">
+            <span class="tag">Breakeven Analysis</span>
+            <span class="tag">Cost Structure</span>
+            <span class="tag">Pricing Strategy</span>
+          </div>
+          <p class="card-story">
+            Applied managerial accounting concepts to a real-world construction scenario.
+            Calculated <strong>breakeven points, mapped competitor pricing,</strong> and
+            recommended margin targets to maintain profitability under different volume assumptions.
+          </p>
+          <div class="actions">
+            <a class="chip" href="docs/construction_company_project.pdf" target="_blank" rel="noopener">Slides (PDF)</a>
+          </div>
+        </article>
 
-      <!-- WRITING -->
-      <section class="section">
-        <h2 class="h2">Writing Samples</h2>
-        <ul class="doc-list">
-          <li><a href="docs/problem_solution_final_draft.pdf" target="_blank" rel="noopener">Problem/Solution - College Mental Health (PDF)</a></li>
-          <li><a href="docs/freespeech_limits_and_censorship.pdf" target="_blank" rel="noopener">Free Speech, Limits, and Censorship (PDF)</a></li>
-          <li><a href="docs/decomposition_lab_report.pdf" target="_blank" rel="noopener">Green Cleaners - Lab Report (PDF)</a></li>
-          <li><a href="docs/personal_narrative.pdf" target="_blank" rel="noopener">ENG105 - Personal Narrative (PDF)</a></li>
-          <li><a href="docs/theranos_essay.pdf" target="_blank" rel="noopener">Theranos Essay (PDF)</a></li>
-        </ul>
-      </section>
+      </div>
+    </div>
 
-      <!-- SERVICE -->
-      <section id="service-full" class="section">
-        <h2 class="h2">Service and Community</h2>
-        <div class="card">
-          <h3>British Virgin Islands - Sunshade Repair and Animal Rescue</h3>
-          <p class="meta">Repaired a beach sunshade structure; assisted local rescue with puppy deticking and care.</p>
-          <div class="gallery">
-            <img src="img/bvi_sunshade_work.jpg" alt="BVI sunshade repair">
-            <img src="img/bvi_sunshade_work2.jpg" alt="BVI sunshade repair - second view">
-            <img src="img/bvi_farm_work.jpg" alt="BVI farm work">
-            <img src="img/bvi_farm_work2.jpg" alt="BVI farm work 2">
-            <img src="img/bvi_farm_work3.jpg" alt="BVI farm work 3">
-            <img src="img/bvi_deticking_pups.jpg" alt="Deticking rescue puppies">
-            <img src="img/bvi_pups.jpg" alt="Rescue puppies">
+    <!-- ═══════════════════════════════════════
+         GROUP 2 — Research & Analysis
+    ═══════════════════════════════════════ -->
+    <div class="work-group" id="research">
+      <div class="work-group-header">
+        <span class="section-label">Research &amp; Analysis</span>
+        <span>Digging into data and drawing conclusions that hold up</span>
+      </div>
+      <div class="card-grid">
+
+        <article class="card">
+          <h3>Lockheed Martin — 10-K Mini Analysis</h3>
+          <div class="card-tags">
+            <span class="tag">Financial Analysis</span>
+            <span class="tag">Ratio Analysis</span>
+            <span class="tag">Defense Industry</span>
+          </div>
+          <p class="card-story">
+            Parsed Lockheed Martin's annual report to track key balance sheet movements year-over-year.
+            Calculated <strong>liquidity, leverage, and efficiency ratios</strong> and interpreted
+            what the shifts signal about the company's financial health and strategic direction.
+          </p>
+          <div class="actions">
+            <a class="chip" href="docs/10k_analysis_lockheedmartin.pdf" target="_blank" rel="noopener">Report (PDF)</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Japan's Lost Decades — Economics</h3>
+          <div class="card-tags">
+            <span class="tag">Macroeconomics</span>
+            <span class="tag">Policy Analysis</span>
+            <span class="tag">Historical Research</span>
+          </div>
+          <p class="card-story">
+            Examined Japan's 1990s asset bubble collapse and the decade of stagnation that followed.
+            Analyzed <strong>monetary policy failures, deflation dynamics,</strong> and the government's
+            fiscal response — then drew parallels to modern low-growth economies.
+          </p>
+          <div class="actions">
+            <a class="chip" href="docs/ecn330_final_project.pdf" target="_blank" rel="noopener">Paper (PDF)</a>
+            <a class="chip" href="docs/econ_final_japan.pdf" target="_blank" rel="noopener">Slides (PDF)</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Drug Cartels, Border Security &amp; Migration</h3>
+          <div class="card-tags">
+            <span class="tag">International Studies</span>
+            <span class="tag">Policy</span>
+            <span class="tag">Interdisciplinary</span>
+          </div>
+          <p class="card-story">
+            Cross-disciplinary research drawing on <strong>history, anthropology, and political science</strong>
+            to understand how cartel power shapes migration patterns and border enforcement policy.
+            Presented findings as both a written paper and a class presentation.
+          </p>
+          <div class="actions">
+            <a class="chip" href="docs/ints_final_project.pdf" target="_blank" rel="noopener">Paper (PDF)</a>
+            <a class="chip" href="docs/english_presentation_drugcartels.pdf" target="_blank" rel="noopener">Slides (PDF)</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         GROUP 3 — Technology
+    ═══════════════════════════════════════ -->
+    <div class="work-group" id="tech">
+      <div class="work-group-header">
+        <span class="section-label">Technology</span>
+        <span>Building things to make ideas tangible</span>
+      </div>
+      <div class="card-grid">
+
+        <article class="card">
+          <h3>AI in Business &amp; Ethics — Website</h3>
+          <div class="card-tags">
+            <span class="tag">HTML/CSS</span>
+            <span class="tag">AI Literacy</span>
+            <span class="tag">Ethics</span>
+          </div>
+          <p class="card-story">
+            Hand-coded a multi-page site to make AI concepts accessible to a non-technical audience.
+            Covers <strong>practical automation, ethical considerations,</strong> and real business use cases —
+            with clean explanations and simple interactive demos.
+          </p>
+          <div class="actions">
+            <a class="chip" href="https://spdt918-cell.github.io/webproject/" target="_blank" rel="noopener">View Site</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         GROUP 4 — Writing
+    ═══════════════════════════════════════ -->
+    <div class="work-group" id="writing">
+      <div class="work-group-header">
+        <span class="section-label">Writing</span>
+        <span>Arguing a point, telling a story, making it land</span>
+      </div>
+      <div class="writing-grid">
+
+        <div class="writing-card">
+          <h3>College Mental Health</h3>
+          <p class="meta">Problem/solution essay proposing systemic fixes to campus mental health access.</p>
+          <div class="actions">
+            <a class="chip" href="docs/problem_solution_final_draft.pdf" target="_blank" rel="noopener">Read (PDF)</a>
           </div>
         </div>
 
-        <div class="card" style="margin-top:16px">
-          <h3>Dominican Republic - Daycare / Primary Education Center</h3>
-          <p class="meta">Helped build and run a community day camp and education center; taught beginner English and organized activities.</p>
-          <div class="gallery">
-            <img src="img/dr_camp_teaching.jpg" alt="Teaching vocabulary at DR center">
-            <img src="img/dr_camp_teaching2.jpg" alt="Teaching at DR center - second view">
-            <img src="img/dr_camp1.jpg" alt="DR day camp 1">
-            <img src="img/dr_camp2.jpg" alt="DR day camp 2">
+        <div class="writing-card">
+          <h3>Free Speech, Limits &amp; Censorship</h3>
+          <p class="meta">Argumentative essay navigating where protected speech ends and harm begins.</p>
+          <div class="actions">
+            <a class="chip" href="docs/freespeech_limits_and_censorship.pdf" target="_blank" rel="noopener">Read (PDF)</a>
           </div>
         </div>
-      </section>
 
-      <!-- DOWNLOADS (complete list) -->
-      <section class="section">
-        <h2 class="h2">All Documents (quick access)</h2>
-        <ul class="doc-list">
-          <li><a href="docs/study_up_businessplan.pdf" target="_blank" rel="noopener">Study-Up Business Plan (PDF)</a></li>
-          <li><a href="docs/decomposition_lab_report.pdf" target="_blank" rel="noopener">Decomposition Lab Report (PDF)</a></li>
-          <li><a href="docs/ints_final_project.pdf" target="_blank" rel="noopener">INTS Final Project (PDF)</a></li>
-          <li><a href="docs/10k_analysis_lockheedmartin.pdf" target="_blank" rel="noopener">10-K Analysis - Lockheed Martin (PDF)</a></li>
-          <li><a href="docs/construction_company_project.pdf" target="_blank" rel="noopener">Construction Company Project (PDF)</a></li>
-          <li><a href="docs/ecn330_final_project.pdf" target="_blank" rel="noopener">ECN330 Final Project (PDF)</a></li>
-          <li><a href="docs/know_the_feeling_marketing_campaign.pdf" target="_blank" rel="noopener">"Know the Feeling" Marketing Campaign (PDF)</a></li>
-          <li><a href="docs/freespeech_limits_and_censorship.pdf" target="_blank" rel="noopener">Free Speech: Limits and Censorship (PDF)</a></li>
-          <li><a href="docs/theranos_essay.pdf" target="_blank" rel="noopener">Theranos Essay (PDF)</a></li>
-          <li><a href="docs/econ_final_japan.pdf" target="_blank" rel="noopener">Economics Final - Japan (PDF)</a></li>
-          <li><a href="docs/english_presentation_drugcartels.pdf" target="_blank" rel="noopener">English Presentation - Drug Cartels (PDF)</a></li>
-          <li><a href="docs/personal_narrative.pdf" target="_blank" rel="noopener">Personal Narrative (PDF)</a></li>
-          <li><a href="docs/problem_solution_final_draft.pdf" target="_blank" rel="noopener">Problem/Solution Final Draft (PDF)</a></li>
-          <li><a href="docs/xboxs_final.pdf" target="_blank" rel="noopener">Xbox Series S Final Presentation (PDF)</a></li>
-        </ul>
-      </section>
-    </main>
+        <div class="writing-card">
+          <h3>Theranos &amp; the Ethics of Fraud</h3>
+          <p class="meta">Analysis of how narrative, ambition, and lack of oversight enabled systemic deception.</p>
+          <div class="actions">
+            <a class="chip" href="docs/theranos_essay.pdf" target="_blank" rel="noopener">Read (PDF)</a>
+          </div>
+        </div>
 
-    <footer class="site-footer">
-      © <span id="y"></span> Sebastian Diaz‑Tafel • <a href="mailto:spdt918@gmail.com">spdt918@gmail.com</a>
-    </footer>
-  </div>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+        <div class="writing-card">
+          <h3>Personal Narrative — ENG105</h3>
+          <p class="meta">A first-person essay on identity, background, and what shaped how I think.</p>
+          <div class="actions">
+            <a class="chip" href="docs/personal_narrative.pdf" target="_blank" rel="noopener">Read (PDF)</a>
+          </div>
+        </div>
+
+        <div class="writing-card">
+          <h3>Green Cleaners — Lab Report</h3>
+          <p class="meta">Scientific write-up on biodegradable cleaning compounds and environmental impact.</p>
+          <div class="actions">
+            <a class="chip" href="docs/decomposition_lab_report.pdf" target="_blank" rel="noopener">Read (PDF)</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         SERVICE & COMMUNITY
+    ═══════════════════════════════════════ -->
+    <div class="work-group" id="service-full">
+      <div class="work-group-header">
+        <span class="section-label">Service &amp; Community</span>
+        <span>Showing up, doing the work, leaving things better</span>
+      </div>
+
+      <p class="service-intro">
+        Some of the most formative experiences I've had weren't in a classroom.
+        <strong>Volunteering internationally</strong> — building structures on a beach in the BVI,
+        teaching English to kids in the Dominican Republic — taught me how to work in conditions
+        you can't fully plan for, communicate across language and culture, and stay useful when things get hard.
+      </p>
+
+      <div class="card" style="margin-bottom:16px">
+        <h3>British Virgin Islands — Sunshade Repair &amp; Animal Rescue</h3>
+        <p class="card-story">
+          Repaired a beach sunshade structure with a small team — no contractor, just hands and problem-solving.
+          Also assisted a local rescue operation with <strong>puppy deticking and care</strong>,
+          which turned out to be one of the more memorable things I've done.
+        </p>
+        <div class="gallery">
+          <img src="img/bvi_sunshade_work.jpg" alt="BVI sunshade repair">
+          <img src="img/bvi_sunshade_work2.jpg" alt="BVI sunshade repair - second view">
+          <img src="img/bvi_farm_work.jpg" alt="BVI farm work">
+          <img src="img/bvi_farm_work2.jpg" alt="BVI farm work 2">
+          <img src="img/bvi_farm_work3.jpg" alt="BVI farm work 3">
+          <img src="img/bvi_deticking_pups.jpg" alt="Deticking rescue puppies">
+          <img src="img/bvi_pups.jpg" alt="Rescue puppies">
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Dominican Republic — Daycare &amp; Primary Education Center</h3>
+        <p class="card-story">
+          Helped <strong>build and run a community education center</strong> from the ground up —
+          construction during the day, teaching beginner English and running activities with the kids afterward.
+          It pushed my Spanish, my patience, and my ability to lead without a clear playbook.
+        </p>
+        <div class="gallery">
+          <img src="img/dr_camp_teaching.jpg" alt="Teaching vocabulary at DR center">
+          <img src="img/dr_camp_teaching2.jpg" alt="Teaching at DR center - second view">
+          <img src="img/dr_camp1.jpg" alt="DR day camp 1">
+          <img src="img/dr_camp2.jpg" alt="DR day camp 2">
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    © <span id="y"></span> Sebastian Diaz‑Tafel • <a href="mailto:spdt918@gmail.com">spdt918@gmail.com</a>
+  </footer>
+</div>
+<script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>
