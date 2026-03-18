@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Know The Feeling — ESPN Campaign · Sebastian Diaz-Tafel</title>
+  <link rel="icon" type="image/png" href="img/headshot.png" />
+  <link rel="stylesheet" href="css/site.css?v=10" />
+  <style>
+    /* ── Project page layout ── */
+    .project-hero {
+      padding: 40px 0 32px;
+      max-width: 760px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .85rem;
+      color: var(--muted);
+      margin-bottom: 24px;
+      transition: color .15s;
+    }
+    .back-link:hover { color: var(--accent); text-decoration: none; }
+    .project-label {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(100,210,255,.1);
+      border: 1px solid rgba(100,210,255,.25);
+      border-radius: 999px;
+      padding: 3px 10px;
+      margin-bottom: 12px;
+    }
+    .project-title {
+      font-size: 36px;
+      line-height: 1.15;
+      margin: 0 0 8px;
+    }
+    .project-subtitle {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      line-height: 1.6;
+    }
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+    .meta-pill {
+      font-size: .82rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--chip);
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    /* ── Stat bar ── */
+    .stat-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+      margin: 0 0 40px;
+    }
+    .stat-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 18px;
+    }
+    .stat-card .stat-num {
+      font-size: 1.6rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+    }
+    .stat-card .stat-label {
+      font-size: .78rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* ── Section blocks ── */
+    .project-section {
+      margin-bottom: 40px;
+      max-width: 760px;
+    }
+    .project-section h2 {
+      font-size: 18px;
+      margin: 0 0 12px;
+      color: var(--text);
+    }
+    .project-section p {
+      color: var(--muted);
+      line-height: 1.75;
+      margin: 0 0 12px;
+      font-size: .95rem;
+    }
+    .project-section p strong { color: var(--text); }
+
+    /* ── Budget breakdown ── */
+    .budget-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .budget-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+    .budget-item .b-label {
+      font-size: .82rem;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .budget-item .b-amount {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .budget-item .b-pct {
+      font-size: .78rem;
+      color: var(--accent);
+      margin-top: 2px;
+    }
+
+    /* ── Creative concepts ── */
+    .concept-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+    .concept-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+    }
+    .concept-card h3 {
+      font-size: .95rem;
+      margin: 0 0 6px;
+      color: var(--accent);
+    }
+    .concept-card p {
+      font-size: .85rem;
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* ── CTA ── */
+    .project-cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 28px 0 40px;
+      border-top: 1px solid var(--border);
+      margin-top: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .project-title { font-size: 26px; }
+      .stat-bar { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header class="site-header">
+    <nav class="nav">
+      <div class="brand">
+        <img src="img/headshot.png" alt="Sebastian Diaz-Tafel headshot" />
+        <span>Sebastian Diaz-Tafel</span>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="mailto:spdt918@gmail.com">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="project-hero">
+      <a class="back-link" href="portfolio.html">← Back to Portfolio</a>
+      <div class="project-label">Marketing Strategy</div>
+      <h1 class="project-title">"Know The Feeling" — ESPN Campaign</h1>
+      <p class="project-subtitle">
+        A social-first marketing campaign designed to bring younger, casual fans
+        into ESPN's prime time NFL broadcasts — by selling the feeling of the game
+        instead of the rules.
+      </p>
+      <div class="project-meta">
+        <span class="meta-pill">Brand Strategy</span>
+        <span class="meta-pill">Creator Marketing</span>
+        <span class="meta-pill">Gen Z Audience</span>
+        <span class="meta-pill">$4M Budget</span>
+        <span class="meta-pill">CU Denver · Principles of Marketing</span>
+      </div>
+    </div>
+
+    <!-- STAT BAR -->
+    <div class="stat-bar">
+      <div class="stat-card">
+        <div class="stat-num">18–29</div>
+        <div class="stat-label">Target age range</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">$4M</div>
+        <div class="stat-label">Total campaign budget</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">200M</div>
+        <div class="stat-label">Projected impressions</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">11x</div>
+        <div class="stat-label">Influencer ROI vs. banner ads</div>
+      </div>
+    </div>
+
+    <!-- THE PROBLEM -->
+    <div class="project-section">
+      <h2>The Problem</h2>
+      <p>
+        ESPN launched prime time NFL broadcasts but faced a real audience gap — younger viewers
+        weren't showing up. Traditional sports marketing was missing them entirely, leaning on
+        legacy, rules, and team knowledge to sell a product that Gen Z wasn't buying.
+      </p>
+      <p>
+        The data backed this up: <strong>NFL viewership has been declining in younger generations</strong>,
+        and ESPN's prime time numbers dropped 5% from 2022–2023 among viewers under 30.
+        Meanwhile, social media accounts for <strong>62% of NFL engagement</strong> for fans under 30 —
+        a channel traditional campaigns were barely using.
+      </p>
+    </div>
+
+    <!-- THE STRATEGY -->
+    <div class="project-section">
+      <h2>The Strategy</h2>
+      <p>
+        The insight behind "Know The Feeling" is simple: <strong>nearly 70% of fans say they
+        watch sports for entertainment rather than technical knowledge.</strong> So instead of
+        teaching people football, the campaign meets them where they already are — emotionally.
+      </p>
+      <p>
+        The approach focused on three pillars. First, <strong>platform-first content</strong> —
+        short vertical clips built for TikTok, Instagram Reels, and YouTube Shorts that look
+        like fan footage, not polished ads. Second, <strong>creator partnerships</strong> —
+        working with micro-influencers (50k–500k followers), meme pages, and vloggers known
+        for humor and reactions rather than sports commentary. Third, <strong>interactivity</strong> —
+        live polls, hashtag campaigns, and communal watch parties to make viewers feel part of
+        something, even from home.
+      </p>
+      <p>
+        The target audience — young adults who stream everything, scroll constantly, and watch
+        sports socially rather than out of loyalty — is <strong>under-targeted by traditional
+        sports marketing.</strong> That's the opening.
+      </p>
+    </div>
+
+    <!-- BUDGET BREAKDOWN -->
+    <div class="project-section">
+      <h2>Budget Breakdown — $4M Total</h2>
+      <div class="budget-grid">
+        <div class="budget-item">
+          <div class="b-label">Social Media Advertising</div>
+          <div class="b-amount">$1.2M</div>
+          <div class="b-pct">30% — TikTok, Reels, YouTube Shorts</div>
+        </div>
+        <div class="budget-item">
+          <div class="b-label">Influencer & Creator Partnerships</div>
+          <div class="b-amount">$1M</div>
+          <div class="b-pct">25% — Micro-influencers & meme pages</div>
+        </div>
+        <div class="budget-item">
+          <div class="b-label">Content Creation</div>
+          <div class="b-amount">$800K</div>
+          <div class="b-pct">20% — Raw footage, edits, crowd reactions</div>
+        </div>
+        <div class="budget-item">
+          <div class="b-label">Engagement & Optimization</div>
+          <div class="b-amount">$700K</div>
+          <div class="b-pct">17.5% — Polls, analytics, watch parties</div>
+        </div>
+        <div class="budget-item">
+          <div class="b-label">Contingency</div>
+          <div class="b-amount">$300K</div>
+          <div class="b-pct">7.5% — Viral moment boosts, reposts</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CREATIVE CONCEPTS -->
+    <div class="project-section">
+      <h2>Creative Concepts</h2>
+      <p>
+        All content leans into vertical, raw, phone-shot footage — authenticity over polish.
+        Two hashtag concepts anchor the campaign:
+      </p>
+      <div class="concept-grid">
+        <div class="concept-card">
+          <h3>#TheBallIsEverything</h3>
+          <p>
+            Treats football like a religion. Dramatic fan voiceovers, people dropping to their
+            knees over big plays, viral moments that turn the sport into something bigger than a game.
+            Pulls in hardcore fans and people who just want to be part of something.
+          </p>
+        </div>
+        <div class="concept-card">
+          <h3>#BettingMyFeelingsAway</h3>
+          <p>
+            Captures the chaos younger fans who sports bet actually feel. Fans flipping out over
+            missed parlays, creators making skits about bad bets. Taps into a cultural moment
+            that traditional sports marketing completely ignores.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAKEAWAY -->
+    <div class="project-section">
+      <h2>The Takeaway</h2>
+      <p>
+        The goal wasn't to teach new viewers football — it was to give them a reason to care.
+        By focusing on emotion over tradition and creators over TV spots, "Know The Feeling"
+        meets a younger audience on their terms and gives them a reason to show up.
+      </p>
+      <p>
+        If it works, <strong>it doesn't just become a campaign — it becomes a movement.</strong>
+      </p>
+    </div>
+
+    <!-- CTA -->
+    <div class="project-cta">
+      <a class="btn primary" href="docs/know_the_feeling_marketing_campaign.pdf" target="_blank" rel="noopener">Read Full Campaign (PDF)</a>
+      <a class="btn" href="portfolio.html">← Back to Portfolio</a>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    © <span id="y"></span> Sebastian Diaz‑Tafel • <a href="mailto:spdt918@gmail.com">spdt918@gmail.com</a>
+  </footer>
+</div>
+<script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
