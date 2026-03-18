@@ -3,196 +3,63 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Intel Sustainability Analysis · Sebastian Diaz-Tafel</title>
+  <title>Intel Sustainability Analysis | Sebastian Diaz-Tafel</title>
   <link rel="icon" type="image/png" href="img/headshot.png" />
   <link rel="stylesheet" href="css/site.css?v=10" />
   <style>
-    /* ── Project page layout (same as espn.html) ── */
-    .project-hero {
-      padding: 40px 0 32px;
-      max-width: 760px;
-    }
+    .project-hero { padding: 40px 0 32px; max-width: 760px; }
     .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: .85rem;
-      color: var(--muted);
-      margin-bottom: 24px;
-      transition: color .15s;
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: .85rem; color: var(--muted); margin-bottom: 24px; transition: color .15s;
     }
     .back-link:hover { color: var(--accent); text-decoration: none; }
     .project-label {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: var(--accent);
-      background: rgba(100,210,255,.1);
-      border: 1px solid rgba(100,210,255,.25);
-      border-radius: 999px;
-      padding: 3px 10px;
-      margin-bottom: 12px;
+      display: inline-block; font-size: 11px; font-weight: 700;
+      letter-spacing: .08em; text-transform: uppercase; color: var(--accent);
+      background: rgba(100,210,255,.1); border: 1px solid rgba(100,210,255,.25);
+      border-radius: 999px; padding: 3px 10px; margin-bottom: 12px;
     }
-    .project-title {
-      font-size: 36px;
-      line-height: 1.15;
-      margin: 0 0 8px;
-    }
-    .project-subtitle {
-      font-size: 1.05rem;
-      color: var(--muted);
-      margin: 0 0 20px;
-      line-height: 1.6;
-    }
-    .project-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 32px;
-    }
+    .project-title { font-size: 36px; line-height: 1.15; margin: 0 0 8px; }
+    .project-subtitle { font-size: 1.05rem; color: var(--muted); margin: 0 0 20px; line-height: 1.6; }
+    .project-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
     .meta-pill {
-      font-size: .82rem;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: var(--chip);
-      border: 1px solid var(--border);
-      color: var(--muted);
+      font-size: .82rem; padding: 4px 10px; border-radius: 999px;
+      background: var(--chip); border: 1px solid var(--border); color: var(--muted);
     }
-
-    /* ── Stat bar ── */
-    .stat-bar {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 12px;
-      margin: 0 0 40px;
-    }
-    .stat-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 16px 18px;
-    }
+    .stat-bar { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 0 0 40px; }
+    .stat-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 16px 18px; }
     .stat-card .stat-num {
-      font-size: 1.6rem;
-      font-weight: 800;
+      font-size: 1.6rem; font-weight: 800;
       background: linear-gradient(90deg, var(--accent), var(--accent2));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1.1;
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; line-height: 1.1;
     }
-    .stat-card .stat-label {
-      font-size: .78rem;
-      color: var(--muted);
-      margin-top: 4px;
-    }
-
-    /* ── Section blocks ── */
-    .project-section {
-      margin-bottom: 40px;
-      max-width: 760px;
-    }
-    .project-section h2 {
-      font-size: 18px;
-      margin: 0 0 12px;
-      color: var(--text);
-    }
-    .project-section p {
-      color: var(--muted);
-      line-height: 1.75;
-      margin: 0 0 12px;
-      font-size: .95rem;
-    }
+    .stat-card .stat-label { font-size: .78rem; color: var(--muted); margin-top: 4px; }
+    .project-section { margin-bottom: 40px; max-width: 760px; }
+    .project-section h2 { font-size: 18px; margin: 0 0 12px; color: var(--text); }
+    .project-section p { color: var(--muted); line-height: 1.75; margin: 0 0 12px; font-size: .95rem; }
     .project-section p strong { color: var(--text); }
-
-    /* ── Finding cards ── */
-    .finding-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 14px;
-      margin-top: 12px;
-    }
-    .finding-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 18px;
-    }
-    .finding-card .finding-num {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 8px;
-    }
-    .finding-card h3 {
-      font-size: .95rem;
-      margin: 0 0 6px;
-      color: var(--text);
-    }
-    .finding-card p {
-      font-size: .85rem;
-      color: var(--muted);
-      margin: 0;
-      line-height: 1.6;
-    }
+    .finding-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; margin-top: 12px; }
+    .finding-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px; }
+    .finding-card .finding-num { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .finding-card h3 { font-size: .95rem; margin: 0 0 6px; color: var(--text); }
+    .finding-card p { font-size: .85rem; color: var(--muted); margin: 0; line-height: 1.6; }
     .finding-card p strong { color: var(--text); }
-
-    /* ── SQL block ── */
     .sql-block {
-      background: #0d1117;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 18px 20px;
-      margin-top: 12px;
-      overflow-x: auto;
+      background: #0d1117; border: 1px solid var(--border); border-radius: 12px;
+      padding: 18px 20px; margin-top: 12px; overflow-x: auto;
     }
-    .sql-block pre {
-      margin: 0;
-      font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
-      font-size: .82rem;
-      line-height: 1.65;
-      color: #e9edf3;
-    }
+    .sql-block pre { margin: 0; font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace; font-size: .82rem; line-height: 1.65; color: #e9edf3; }
     .sql-block .kw { color: #64d2ff; }
-    .sql-block .fn { color: #7cf9c5; }
-    .sql-block .cm { color: #636e7b; font-style: italic; }
     .sql-block .st { color: #f8a97d; }
-
-    /* ── Recommendation box ── */
     .rec-box {
       background: linear-gradient(135deg, rgba(100,210,255,.06), rgba(124,249,197,.06));
-      border: 1px solid rgba(100,210,255,.2);
-      border-radius: 16px;
-      padding: 24px;
-      margin-top: 12px;
+      border: 1px solid rgba(100,210,255,.2); border-radius: 16px; padding: 24px; margin-top: 12px;
     }
-    .rec-box h3 {
-      font-size: 1rem;
-      margin: 0 0 10px;
-      color: var(--accent);
-    }
-    .rec-box p {
-      font-size: .92rem;
-      color: var(--muted);
-      margin: 0;
-      line-height: 1.75;
-    }
+    .rec-box h3 { font-size: 1rem; margin: 0 0 10px; color: var(--accent); }
+    .rec-box p { font-size: .92rem; color: var(--muted); margin: 0; line-height: 1.75; }
     .rec-box p strong { color: var(--text); }
-
-    /* ── CTA ── */
-    .project-cta {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      padding: 28px 0 40px;
-      border-top: 1px solid var(--border);
-      margin-top: 8px;
-    }
-
+    .project-cta { display: flex; gap: 12px; flex-wrap: wrap; padding: 28px 0 40px; border-top: 1px solid var(--border); margin-top: 8px; }
     @media (max-width: 600px) {
       .project-title { font-size: 26px; }
       .stat-bar { grid-template-columns: repeat(2, 1fr); }
@@ -222,9 +89,9 @@
       <div class="project-label">SQL · Data Analysis</div>
       <h1 class="project-title">Intel — Sustainability Impact Analysis</h1>
       <p class="project-subtitle">
-        Used SQL to analyze 601,740 repurposed devices from Intel's 2024 sustainability program —
-        finding where the program was leaving environmental impact on the table, and building
-        a data-driven recommendation to fix it.
+        Used SQL to analyze 601,740 repurposed devices from Intel's 2024 sustainability program,
+        looking for where the program was underperforming environmentally and building a
+        data-driven recommendation from what the data showed.
       </p>
       <div class="project-meta">
         <span class="meta-pill">SQL</span>
@@ -235,7 +102,6 @@
       </div>
     </div>
 
-    <!-- STAT BAR -->
     <div class="stat-bar">
       <div class="stat-card">
         <div class="stat-num">601K</div>
@@ -255,35 +121,33 @@
       </div>
     </div>
 
-    <!-- THE TASK -->
     <div class="project-section">
       <h2>The Task</h2>
       <p>
-        Intel's repurposing program extends the life of laptops and desktops instead of
-        manufacturing new ones — reducing e-waste, energy consumption, and CO₂ emissions.
-        The question was: <strong>is the program targeting the right devices, in the right regions,
-        to maximize environmental impact?</strong>
+        Intel's repurposing program extends the life of existing laptops and desktops rather than
+        manufacturing new ones, which reduces e-waste, energy consumption, and CO₂ emissions.
+        The question I was asked to answer was whether the program was targeting the right devices
+        in the right regions to get the most environmental impact out of each one.
       </p>
       <p>
-        I was given two datasets — device data and impact data — and asked to join, clean,
-        bucket, and analyze them to surface patterns and build a concrete recommendation.
-        Everything was done in SQL.
+        I worked with two datasets, device data and impact data, and was asked to join, clean,
+        bucket, and analyze them to surface patterns and produce a concrete recommendation.
+        Everything was written in SQL.
       </p>
     </div>
 
-    <!-- THE APPROACH -->
     <div class="project-section">
       <h2>The Approach</h2>
       <p>
-        The analysis ran in four stages. First, I joined the two tables on <code>device_id</code>
-        and calculated a <code>device_age</code> column. Then I used a <code>CASE WHEN</code> clause
-        to bucket devices into newer (0–3 years), mid-age (4–6 years), and older (7+ years) groups.
-        From there I aggregated by device type, age bucket, and region to find where the energy
-        savings and CO₂ reductions were actually coming from. The final query used
-        <strong>multiple CTEs</strong> to calculate each device type's percentage contribution
-        to regional totals.
+        The analysis ran in four stages. I started by joining the two tables on <code>device_id</code>
+        and calculating a <code>device_age</code> column from the model year. From there I used a
+        <code>CASE WHEN</code> clause to group devices into newer (0 to 3 years), mid-age (4 to 6 years),
+        and older (7 or more years) buckets. I then aggregated by device type, age bucket, and region
+        to find where the energy savings and CO₂ reductions were actually concentrated. The final
+        query used <strong>multiple CTEs</strong> to calculate each device type's percentage
+        contribution to regional totals.
       </p>
-      <p>Here's the core bucketing query that drove most of the analysis:</p>
+      <p>The core bucketing query that most of the analysis built on:</p>
       <div class="sql-block">
         <pre><span class="kw">SELECT</span>
   d.*,
@@ -300,82 +164,81 @@
       </div>
     </div>
 
-    <!-- KEY FINDINGS -->
     <div class="project-section">
       <h2>Key Findings</h2>
       <div class="finding-grid">
 
         <div class="finding-card">
           <div class="finding-num">Finding 01</div>
-          <h3>Volume vs. impact tradeoff</h3>
-          <p>The program mostly repurposes <strong>newer devices (317,191)</strong> but older
-          devices save <strong>48 kWh per unit vs. 19 kWh</strong> for newer ones — more than
-          double the per-unit impact. The program is prioritizing volume over environmental return.</p>
+          <h3>Volume vs. per-unit impact</h3>
+          <p>The program repurposes mostly newer devices (317,191) but older devices save
+          <strong>48 kWh per unit compared to 19 kWh</strong> for newer ones. The program
+          is getting more volume but leaving per-unit environmental return on the table.</p>
         </div>
 
         <div class="finding-card">
           <div class="finding-num">Finding 02</div>
           <h3>Laptops drive total savings</h3>
-          <p>Laptops account for <strong>408,064 of 601,740 devices</strong> — more than twice
-          as many as desktops. Since average savings per device are nearly identical,
-          laptop volume is what moves the needle on total CO₂ saved.</p>
+          <p>Laptops make up <strong>408,064 of the 601,740 devices</strong> repurposed, more
+          than twice as many as desktops. Average savings per device are nearly the same for both,
+          so laptop volume is what drives the total CO₂ numbers.</p>
         </div>
 
         <div class="finding-card">
           <div class="finding-num">Finding 03</div>
-          <h3>Region changes everything</h3>
-          <p>Energy savings per device are nearly equal across regions (~25.7 kWh), but
-          <strong>Asia saves 0.0155 tons of CO₂ per device</strong> vs. 0.0064 tons in Europe —
-          because Asia's grid relies heavily on coal, so every kWh saved prevents far more emissions.</p>
+          <h3>Region changes the CO₂ math</h3>
+          <p>Energy savings per device are roughly equal across all three regions at around 25.7 kWh,
+          but <strong>Asia saves 0.0155 tons of CO₂ per device</strong> compared to 0.0064 tons
+          in Europe. Asia's power grid relies heavily on coal, so each kWh saved there prevents
+          significantly more emissions.</p>
         </div>
 
         <div class="finding-card">
           <div class="finding-num">Finding 04</div>
           <h3>Scale of the program</h3>
-          <p>601,740 devices at ~25.7 kWh each adds up to <strong>~15.5 million kWh saved</strong>
-          and 6,678 tons of CO₂ — roughly equivalent to taking 1,500 cars off the road for a year.</p>
+          <p>601,740 devices at around 25.7 kWh each adds up to <strong>roughly 15.5 million kWh
+          saved</strong> and 6,678 tons of CO₂ in a single year, which is about the equivalent
+          of taking 1,500 cars off the road.</p>
         </div>
 
       </div>
     </div>
 
-    <!-- RECOMMENDATION -->
     <div class="project-section">
       <h2>The Recommendation</h2>
       <div class="rec-box">
         <h3>Route older laptops to Asia.</h3>
         <p>
-          Older devices save <strong>48 kWh per unit vs. 19 kWh for newer ones</strong>, and laptops
-          already make up the majority of repurposed devices. Asia's fossil-fuel-heavy grid means
-          <strong>each device saves 0.0155 tons of CO₂</strong> — more than double Europe's 0.0064 tons.
-          Combining the highest per-unit savings with the highest-impact region creates the best
-          possible environmental return per device.
+          Older devices save <strong>48 kWh per unit compared to 19 kWh for newer ones</strong>,
+          and laptops already make up the majority of what gets repurposed. Asia's coal-heavy grid
+          means <strong>each device saves 0.0155 tons of CO₂</strong>, more than double the
+          0.0064 tons saved in Europe. Combining the highest per-unit energy savings with the
+          highest-impact region produces the best possible environmental return per device.
         </p>
         <p style="margin-top:10px">
-          The constraint: only 20,239 older devices were repurposed in 2024, so Intel would also
-          need to <strong>expand collection partnerships</strong> to source more of them. And while
-          transportation costs to Asia could offset some gains, that analysis would require
-          cost data not available in this dataset.
+          The main constraint is supply. Only 20,239 older devices were repurposed in 2024,
+          so Intel would also need to <strong>expand collection partnerships</strong> to source
+          more of them. Transportation costs to Asia could also offset some of the gains, but
+          that analysis would require cost data that was not available in this dataset.
         </p>
       </div>
     </div>
 
-    <!-- WHAT I LEARNED -->
     <div class="project-section">
       <h2>What I Took Away</h2>
       <p>
-        The most interesting part wasn't the SQL — it was the moment the two findings connected.
-        I had older devices saving more energy per unit in one query, and Asia preventing more CO₂
-        per kWh in another. When I asked why Asia's numbers were so different, the answer was coal.
-        <strong>That's when the recommendation wrote itself.</strong>
+        The SQL itself was not the hard part. The interesting moment was when two separate
+        findings connected. I had older devices saving more energy per unit in one query,
+        and Asia preventing more CO₂ per kWh in another. When I looked into why Asia's
+        numbers were so different, the answer was coal. <strong>That is when the
+        recommendation became obvious.</strong>
       </p>
       <p>
-        It's a good reminder that data analysis isn't just about running queries — it's about
-        knowing when two separate findings are actually one bigger insight.
+        It is a good example of why data analysis is not just about writing correct queries.
+        It is about knowing when two results are actually pointing at the same thing.
       </p>
     </div>
 
-    <!-- CTA -->
     <div class="project-cta">
       <a class="btn primary" href="docs/intel_sustainability.pdf" target="_blank" rel="noopener">Read Full Report (PDF)</a>
       <a class="btn" href="portfolio.html">← Back to Portfolio</a>
@@ -384,7 +247,7 @@
   </main>
 
   <footer class="site-footer">
-    © <span id="y"></span> Sebastian Diaz‑Tafel • <a href="mailto:spdt918@gmail.com">spdt918@gmail.com</a>
+    © <span id="y"></span> Sebastian Diaz-Tafel • <a href="mailto:spdt918@gmail.com">spdt918@gmail.com</a>
   </footer>
 </div>
 <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
