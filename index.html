@@ -65,6 +65,35 @@
       50% { opacity: .4; }
     }
 
+    .certs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+.cert-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: .82rem;
+  color: var(--muted);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 6px 12px;
+}
+.cert-icon {
+  color: var(--accent);
+  font-size: .7rem;
+}
+.cert-name {
+  color: var(--text);
+  font-weight: 600;
+}
+.cert-issuer {
+  color: var(--muted);
+}
+
     /* ── Mobile nav fix ── */
     @media (max-width: 600px) {
       .nav { flex-wrap: wrap; gap: 8px; }
@@ -160,6 +189,7 @@
       <div class="pills">
         <span class="pill">ArcGIS</span>
         <span class="pill">SQL</span>
+        <span class="pill">Python</span>
         <span class="pill">Excel</span>
         <span class="pill">Tableau</span>
         <span class="pill">HTML/CSS</span>
@@ -167,6 +197,23 @@
         <span class="pill">Spanish/English</span>
       </div>
     </div>
+
+    <!-- CHANGE 2: Add certifications row just below the pills div -->
+
+<div class="certs">
+  <div class="cert-item">
+    <span class="cert-icon">✦</span>
+    <span class="cert-name">SQL for Data Analysis</span>
+    <span class="cert-issuer">Global Career Accelerator</span>
+    <a href="https://www.credential.net/c2eef316-ad48-4fb8-9307-15c15a381be4#acc.vykzldYH" target="_blank" rel="noopener" style="font-size:.75rem; color:var(--accent); margin-left:4px;">View</a>
+  </div>
+  <div class="cert-item">
+    <span class="cert-icon">✦</span>
+    <span class="cert-name">Python Certification</span>
+    <span class="cert-issuer">Global Career Accelerator · In Progress</span>
+  </div>
+</div>
+    
   </section>
 
 <!-- FEATURED — replace the entire section in index.html -->
