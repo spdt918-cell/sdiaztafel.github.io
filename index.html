@@ -65,34 +65,45 @@
       50% { opacity: .4; }
     }
 
+    /* ── Certs ── */
     .certs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 12px;
-}
-.cert-item {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  font-size: .82rem;
-  color: var(--muted);
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 6px 12px;
-}
-.cert-icon {
-  color: var(--accent);
-  font-size: .7rem;
-}
-.cert-name {
-  color: var(--text);
-  font-weight: 600;
-}
-.cert-issuer {
-  color: var(--muted);
-}
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .cert-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .82rem;
+      color: var(--muted);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 6px 10px;
+    }
+    .cert-item img {
+      width: 28px;
+      height: 28px;
+      border-radius: 4px;
+      object-fit: contain;
+      background: var(--chip);
+      flex-shrink: 0;
+    }
+    .cert-name {
+      color: var(--text);
+      font-weight: 600;
+    }
+    .cert-issuer {
+      color: var(--muted);
+    }
+    .cert-link {
+      font-size: .75rem;
+      color: var(--accent);
+      margin-left: 2px;
+      white-space: nowrap;
+    }
 
     /* ── Mobile nav fix ── */
     @media (max-width: 600px) {
@@ -109,6 +120,7 @@
       .currently { margin: 4px auto 0; }
       .actions { justify-content: center; }
       .pills { justify-content: center; }
+      .certs { justify-content: center; }
     }
 
     /* ── Featured section ── */
@@ -196,27 +208,26 @@
         <span class="pill">Leadership</span>
         <span class="pill">Spanish/English</span>
       </div>
+      <div class="certs">
+        <div class="cert-item">
+          <img src="img/sql_cert.png" alt="SQL certification badge" />
+          <div>
+            <span class="cert-name">SQL for Data Analysis</span>
+            <span class="cert-issuer"> · Global Career Accelerator</span>
+          </div>
+          <a class="cert-link" href="https://www.credential.net/c2eef316-ad48-4fb8-9307-15c15a381be4#acc.vykzldYH" target="_blank" rel="noopener">View ↗</a>
+        </div>
+        <div class="cert-item">
+          <div>
+            <span class="cert-name">Python</span>
+            <span class="cert-issuer"> · Global Career Accelerator · In Progress</span>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <!-- CHANGE 2: Add certifications row just below the pills div -->
-
-<div class="certs">
-  <div class="cert-item">
-    <span class="cert-icon">✦</span>
-    <span class="cert-name">SQL for Data Analysis</span>
-    <span class="cert-issuer">Global Career Accelerator</span>
-    <a href="https://www.credential.net/c2eef316-ad48-4fb8-9307-15c15a381be4#acc.vykzldYH" target="_blank" rel="noopener" style="font-size:.75rem; color:var(--accent); margin-left:4px;">View</a>
-  </div>
-  <div class="cert-item">
-    <span class="cert-icon">✦</span>
-    <span class="cert-name">Python Certification</span>
-    <span class="cert-issuer">Global Career Accelerator · In Progress</span>
-  </div>
-</div>
-    
   </section>
 
-<!-- FEATURED — replace the entire section in index.html -->
+  <!-- FEATURED -->
   <section class="section">
     <h2 class="h2">Featured Work</h2>
     <div class="card-grid">
@@ -264,14 +275,12 @@
     </div>
   </section>
 
-
-  <!-- CHANGE 2: Replace the entire service teaser section -->
-
+  <!-- SERVICE TEASER -->
   <section id="service" class="section">
     <h2 class="h2">Service &amp; Community</h2>
     <div class="card">
       <div class="service-bullets">
-        <p class="service-bullet"><strong>British Virgin Islands</strong> — worked with a small team to repair a beach sunshade structure from scratch, then spent time helping a local animal rescue with puppy care and deticking.</p>
+        <p class="service-bullet"><strong>British Virgin Islands</strong> — worked with a small team to repair a beach sunshade structure and helped with roofing work on a local farm, then spent time with a local animal rescue doing puppy care and deticking.</p>
         <p class="service-bullet"><strong>Dominican Republic</strong> — helped build a preschool and ran a community day camp in a small Haitian village, teaching beginner English and organizing daily activities for the kids.</p>
       </div>
       <div class="gallery">
