@@ -3,11 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio — Sebastian Diaz‑Tafel</title>
-  <link rel="icon" type="image/jpeg" href="img/headshot.png" />
+  <title>Portfolio — Sebastian Diaz-Tafel</title>
+  <link rel="icon" type="image/png" href="img/headshot.png" />
   <link rel="stylesheet" href="css/site.css" />
   <style>
-    /* ── Section label pills ── */
     .section-label {
       display: inline-block;
       font-size: 11px;
@@ -21,8 +20,6 @@
       padding: 3px 10px;
       margin-bottom: 10px;
     }
-
-    /* ── Category group ── */
     .work-group { margin-bottom: 48px; }
     .work-group-header {
       display: flex;
@@ -34,13 +31,8 @@
     }
     .work-group-header h2 { margin: 0; font-size: 20px; }
     .work-group-header span { color: var(--muted); font-size: .88rem; }
-
-    /* ── Richer project card ── */
     .card { position: relative; }
-    .card-tags {
-      display: flex; flex-wrap: wrap; gap: 6px;
-      margin: 10px 0 6px;
-    }
+    .card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 6px; }
     .tag {
       font-size: 11px;
       padding: 2px 8px;
@@ -56,8 +48,6 @@
       line-height: 1.55;
     }
     .card-story strong { color: var(--text); }
-
-    /* ── Writing cards ── */
     .writing-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -71,8 +61,6 @@
     }
     .writing-card h3 { font-size: .95rem; margin: 0 0 4px; }
     .writing-card .meta { font-size: .83rem; color: var(--muted); margin: 0 0 10px; }
-
-    /* ── Service section ── */
     .service-intro {
       font-size: .95rem;
       color: var(--muted);
@@ -92,16 +80,9 @@
       object-fit: cover; border-radius: 12px;
       border: 1px solid var(--border);
     }
-
-    /* ── Page intro ── */
-    .page-intro {
-      padding: 28px 0 8px;
-      max-width: 640px;
-    }
+    .page-intro { padding: 28px 0 8px; max-width: 640px; }
     .page-intro h1 { margin: 0 0 8px; }
     .page-intro p { color: var(--muted); margin: 0; font-size: .95rem; line-height: 1.65; }
-
-    /* ── Nav brand image teal background ── */
     .brand img { background: #0e7490; }
   </style>
 </head>
@@ -112,7 +93,7 @@
     <nav class="nav">
       <div class="brand">
         <img src="img/headshot.png" alt="Sebastian headshot" />
-        <span>Sebastian Diaz‑Tafel</span>
+        <span>Sebastian Diaz-Tafel</span>
       </div>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -124,18 +105,15 @@
 
   <main>
 
-    <!-- PAGE INTRO -->
     <div class="page-intro">
       <span class="section-label">My Work</span>
       <h1 class="h1">Portfolio</h1>
-      <p>A collection of projects across business strategy, data analysis, research, and writing —
+      <p>A collection of projects across business strategy, data analysis, research, and writing,
          plus community work from the field. Each piece reflects how I think through a problem
          and communicate what I find.</p>
     </div>
 
-    <!-- ═══════════════════════════════════════
-         GROUP 1 — Business & Strategy
-    ═══════════════════════════════════════ -->
+    <!-- BUSINESS & STRATEGY -->
     <div class="work-group" id="business">
       <div class="work-group-header">
         <span class="section-label">Business &amp; Strategy</span>
@@ -151,9 +129,9 @@
             <span class="tag">Competitive Analysis</span>
           </div>
           <p class="card-story">
-            Built a full go-to-market plan for a study-partner app.
-            <strong>Sized the TAM/SAM/SOM</strong>, modeled three pricing tiers, mapped competitors,
-            and built a 3-year revenue projection. The goal was to make the opportunity feel real and fundable.
+            Built a full go-to-market plan for a study-partner app as part of a team at Chatham University.
+            I handled the financial side, including <strong>TAM/SAM/SOM sizing, pricing tier modeling,</strong>
+            and a 3-year revenue projection. The goal was to make the opportunity feel real enough to pitch to investors.
           </p>
           <div class="actions">
             <a class="chip" href="docs/study_up_businessplan.pdf" target="_blank" rel="noopener">Business Plan (PDF)</a>
@@ -168,9 +146,10 @@
             <span class="tag">Content Planning</span>
           </div>
           <p class="card-story">
-            Designed a social-first campaign to bring younger fans into the NFL ecosystem.
-            Developed <strong>audience positioning, a creator partnership strategy,</strong>
-            and a phased content calendar — all rooted in how Gen Z actually consumes sports media.
+            Designed a $4M social-first campaign to grow ESPN's prime time NFL audience among younger viewers.
+            The strategy centered on <strong>emotion over rules</strong>, using creator partnerships and
+            short-form content instead of traditional sports advertising. Research-backed with Deloitte
+            data on Gen Z sports habits.
           </p>
           <div class="actions">
             <a class="chip" href="espn.html">View Project</a>
@@ -186,9 +165,10 @@
             <span class="tag">Pricing Strategy</span>
           </div>
           <p class="card-story">
-            Applied managerial accounting concepts to a real-world construction scenario.
-            Calculated <strong>breakeven points, mapped competitor pricing,</strong> and
-            recommended margin targets to maintain profitability under different volume assumptions.
+            Applied managerial accounting to a fictional construction company set in Houston, TX.
+            Worked through <strong>breakeven analysis, a competitor pricing scan,</strong> and monthly
+            cash flow projections across seasonal demand changes. Benchmarked against D.R. Horton's
+            10-K for context.
           </p>
           <div class="actions">
             <a class="chip" href="docs/construction_company_project.pdf" target="_blank" rel="noopener">Slides (PDF)</a>
@@ -198,15 +178,32 @@
       </div>
     </div>
 
-    <!-- ═══════════════════════════════════════
-         GROUP 2 — Research & Analysis
-    ═══════════════════════════════════════ -->
+    <!-- RESEARCH & ANALYSIS -->
     <div class="work-group" id="research">
       <div class="work-group-header">
         <span class="section-label">Research &amp; Analysis</span>
         <span>Digging into data and drawing conclusions that hold up</span>
       </div>
       <div class="card-grid">
+
+        <article class="card">
+          <h3>Intel — Sustainability Impact Analysis</h3>
+          <div class="card-tags">
+            <span class="tag">SQL</span>
+            <span class="tag">Data Analysis</span>
+            <span class="tag">Sustainability</span>
+          </div>
+          <p class="card-story">
+            Used SQL to analyze 601,740 repurposed devices from Intel's 2024 sustainability program.
+            Found that <strong>older devices save 2.5x more energy per unit</strong> than newer ones,
+            and that the same kWh saved prevents far more CO2 in Asia than in Europe due to grid differences.
+            Built a recommendation from those two findings using joins, CASE WHEN bucketing, and CTEs.
+          </p>
+          <div class="actions">
+            <a class="chip" href="intel.html">View Project</a>
+            <a class="chip" href="docs/intel_sustainability.pdf" target="_blank" rel="noopener">Report (PDF)</a>
+          </div>
+        </article>
 
         <article class="card">
           <h3>Lockheed Martin — 10-K Mini Analysis</h3>
@@ -216,9 +213,10 @@
             <span class="tag">Defense Industry</span>
           </div>
           <p class="card-story">
-            Parsed Lockheed Martin's annual report to track key balance sheet movements year-over-year.
-            Calculated <strong>liquidity, leverage, and efficiency ratios</strong> and interpreted
-            what the shifts signal about the company's financial health and strategic direction.
+            Analyzed Lockheed Martin's balance sheet across 2021 and 2022, tracking movements in
+            cash, accounts receivable, contract assets, and long-term debt.
+            Calculated <strong>liquidity, leverage, and efficiency ratios</strong> and wrote up what
+            the shifts suggest about the company's financial position and strategic priorities.
           </p>
           <div class="actions">
             <a class="chip" href="docs/10k_analysis_lockheedmartin.pdf" target="_blank" rel="noopener">Report (PDF)</a>
@@ -233,9 +231,10 @@
             <span class="tag">Historical Research</span>
           </div>
           <p class="card-story">
-            Examined Japan's 1990s asset bubble collapse and the decade of stagnation that followed.
-            Analyzed <strong>monetary policy failures, deflation dynamics,</strong> and the government's
-            fiscal response — then drew parallels to modern low-growth economies.
+            Researched Japan's 1990s asset bubble collapse and the decade of stagnation that followed.
+            The paper covers <strong>how the bubble formed, why monetary policy failed,</strong> and
+            what the government's use of capital injections and stimulus packages actually accomplished.
+            Draws on Federal Reserve economic data and IMF working papers.
           </p>
           <div class="actions">
             <a class="chip" href="docs/ecn330_final_project.pdf" target="_blank" rel="noopener">Paper (PDF)</a>
@@ -251,9 +250,10 @@
             <span class="tag">Interdisciplinary</span>
           </div>
           <p class="card-story">
-            Cross-disciplinary research drawing on <strong>history, anthropology, and political science</strong>
-            to understand how cartel power shapes migration patterns and border enforcement policy.
-            Presented findings as both a written paper and a class presentation.
+            Interdisciplinary research paper examining how Mexican cartels have shaped border security
+            and migration patterns. I wrote the political science section, focusing on
+            <strong>sovereignty, corruption, and why policies like the Merida Initiative fell short.</strong>
+            Co-authored with two classmates who covered the historical and anthropological perspectives.
           </p>
           <div class="actions">
             <a class="chip" href="docs/ints_final_project.pdf" target="_blank" rel="noopener">Paper (PDF)</a>
@@ -262,29 +262,9 @@
         </article>
 
       </div>
-      <article class="card">
-  <h3>Intel — Sustainability Impact Analysis</h3>
-  <div class="card-tags">
-    <span class="tag">SQL</span>
-    <span class="tag">Data Analysis</span>
-    <span class="tag">Sustainability</span>
-  </div>
-  <p class="card-story">
-    Analyzed 601,740 repurposed devices to evaluate Intel's sustainability program.
-    Used <strong>SQL joins, CASE WHEN bucketing, and CTEs</strong> to uncover that
-    older devices save 2.5x more energy per unit — and built a data-driven recommendation
-    to maximize CO₂ impact by region.
-  </p>
-  <div class="actions">
-    <a class="chip" href="intel.html">View Project</a>
-    <a class="chip" href="docs/intel_sustainability.pdf" target="_blank" rel="noopener">Report (PDF)</a>
-  </div>
-</article>
     </div>
 
-    <!-- ═══════════════════════════════════════
-         GROUP 3 — Technology
-    ═══════════════════════════════════════ -->
+    <!-- TECHNOLOGY -->
     <div class="work-group" id="tech">
       <div class="work-group-header">
         <span class="section-label">Technology</span>
@@ -300,9 +280,9 @@
             <span class="tag">Ethics</span>
           </div>
           <p class="card-story">
-            Hand-coded a multi-page site to make AI concepts accessible to a non-technical audience.
-            Covers <strong>practical automation, ethical considerations,</strong> and real business use cases —
-            with clean explanations and simple interactive demos.
+            Built a multi-page site from scratch to explain AI concepts to a non-technical audience.
+            Covers <strong>practical automation, ethics, and real business use cases</strong> with
+            clear writeups and simple interactive demos. No frameworks, just HTML and CSS.
           </p>
           <div class="actions">
             <a class="chip" href="https://spdt918-cell.github.io/webproject/" target="_blank" rel="noopener">View Site</a>
@@ -312,9 +292,7 @@
       </div>
     </div>
 
-    <!-- ═══════════════════════════════════════
-         GROUP 4 — Writing
-    ═══════════════════════════════════════ -->
+    <!-- WRITING -->
     <div class="work-group" id="writing">
       <div class="work-group-header">
         <span class="section-label">Writing</span>
@@ -324,7 +302,7 @@
 
         <div class="writing-card">
           <h3>College Mental Health</h3>
-          <p class="meta">Problem/solution essay proposing systemic fixes to campus mental health access.</p>
+          <p class="meta">Problem/solution essay arguing for systemic changes to how colleges handle student mental health access and wait times.</p>
           <div class="actions">
             <a class="chip" href="docs/problem_solution_final_draft.pdf" target="_blank" rel="noopener">Read (PDF)</a>
           </div>
@@ -332,7 +310,7 @@
 
         <div class="writing-card">
           <h3>Free Speech, Limits &amp; Censorship</h3>
-          <p class="meta">Argumentative essay navigating where protected speech ends and harm begins.</p>
+          <p class="meta">Argumentative essay working through where protected speech ends and where real harm begins, using case law and current examples.</p>
           <div class="actions">
             <a class="chip" href="docs/freespeech_limits_and_censorship.pdf" target="_blank" rel="noopener">Read (PDF)</a>
           </div>
@@ -340,7 +318,7 @@
 
         <div class="writing-card">
           <h3>Theranos &amp; the Ethics of Fraud</h3>
-          <p class="meta">Analysis of how narrative, ambition, and lack of oversight enabled systemic deception.</p>
+          <p class="meta">Essay analyzing how narrative, investor pressure, and weak oversight let Theranos operate as long as it did.</p>
           <div class="actions">
             <a class="chip" href="docs/theranos_essay.pdf" target="_blank" rel="noopener">Read (PDF)</a>
           </div>
@@ -348,7 +326,7 @@
 
         <div class="writing-card">
           <h3>Personal Narrative — ENG105</h3>
-          <p class="meta">A personal essay about volunteering in a Haitian community in the Dominican Republic — building a preschool, teaching English, and figuring out why connecting with the kids scared me more than the construction work did.</p>
+          <p class="meta">Personal essay about volunteering in a Haitian community in the Dominican Republic, building a preschool and teaching English to kids who had a lot of questions about why I spoke Spanish.</p>
           <div class="actions">
             <a class="chip" href="docs/personal_narrative.pdf" target="_blank" rel="noopener">Read (PDF)</a>
           </div>
@@ -356,7 +334,7 @@
 
         <div class="writing-card">
           <h3>Green Cleaners — Lab Report</h3>
-          <p class="meta">Scientific write-up on biodegradable cleaning compounds and environmental impact.</p>
+          <p class="meta">Lab report on biodegradable cleaning compounds, testing effectiveness and environmental impact compared to conventional products.</p>
           <div class="actions">
             <a class="chip" href="docs/decomposition_lab_report.pdf" target="_blank" rel="noopener">Read (PDF)</a>
           </div>
@@ -365,9 +343,7 @@
       </div>
     </div>
 
-    <!-- ═══════════════════════════════════════
-         SERVICE & COMMUNITY
-    ═══════════════════════════════════════ -->
+    <!-- SERVICE & COMMUNITY -->
     <div class="work-group" id="service-full">
       <div class="work-group-header">
         <span class="section-label">Service &amp; Community</span>
@@ -375,22 +351,25 @@
       </div>
 
       <p class="service-intro">
-        Some of the most formative experiences I've had weren't in a classroom.
-        <strong>Volunteering internationally</strong> — building structures on a beach in the BVI,
-        teaching English to kids in the Dominican Republic — taught me how to work in conditions
-        you can't fully plan for, communicate across language and culture, and stay useful when things get hard.
+        Two international service trips that pushed me well outside any comfort zone.
+        Both involved real physical work in under-resourced communities, and both taught me
+        things about <strong>adaptability, cross-cultural communication, and staying useful
+        when there is no clear playbook</strong> that I haven't learned anywhere else.
       </p>
 
       <div class="card" style="margin-bottom:16px">
         <h3>British Virgin Islands — Sunshade Repair &amp; Animal Rescue</h3>
         <p class="card-story">
-          Repaired a beach sunshade structure with a small team — no contractor, just hands and problem-solving.
-          Also assisted a local rescue operation with <strong>puppy deticking and care</strong>,
-          which turned out to be one of the more memorable things I've done.
+          Spent time on a small island doing physical volunteer work across a few different sites.
+          We repaired a beach sunshade structure and helped with roofing work on a local farm,
+          laying rebar and doing concrete prep.
+          We also spent time with a local animal rescue, providing care and deticking for puppies
+          that had been brought in. <strong>None of it was glamorous</strong> but all of it was
+          real, and it's some of the most useful work I've done.
         </p>
         <div class="gallery">
           <img src="img/bvi_sunshade_work.jpg" alt="BVI sunshade repair">
-          <img src="img/bvi_sunshade_work2.jpg" alt="BVI sunshade repair - second view">
+          <img src="img/bvi_sunshade_work2.jpg" alt="BVI sunshade repair second view">
           <img src="img/bvi_farm_work.jpg" alt="BVI farm work">
           <img src="img/bvi_farm_work2.jpg" alt="BVI farm work 2">
           <img src="img/bvi_farm_work3.jpg" alt="BVI farm work 3">
@@ -402,13 +381,18 @@
       <div class="card">
         <h3>Dominican Republic — Daycare &amp; Primary Education Center</h3>
         <p class="card-story">
-          Helped <strong>build and run a community education center</strong> from the ground up —
-          construction during the day, teaching beginner English and running activities with the kids afterward.
-          It pushed my Spanish, my patience, and my ability to lead without a clear playbook.
+          Traveled to Naranjo, a small Haitian community outside Santo Domingo, to help
+          build and run a preschool and day camp. During the day we mixed concrete, dug
+          foundations, and built walls. In the afternoons I taught beginner English to the kids,
+          which ended up being the part I didn't expect to care about as much as I did.
+          <strong>Speaking Spanish in a Dominican community</strong> as someone who grew up
+          learning it in a Mexican household was its own experience. The kids had a lot of
+          questions about that. It pushed my patience, my language skills, and my ability
+          to lead without knowing exactly what I was doing.
         </p>
         <div class="gallery">
           <img src="img/dr_camp_teaching.jpg" alt="Teaching vocabulary at DR center">
-          <img src="img/dr_camp_teaching2.jpg" alt="Teaching at DR center - second view">
+          <img src="img/dr_camp_teaching2.jpg" alt="Teaching at DR center second view">
           <img src="img/dr_camp1.jpg" alt="DR day camp 1">
           <img src="img/dr_camp2.jpg" alt="DR day camp 2">
         </div>
@@ -418,7 +402,7 @@
   </main>
 
   <footer class="site-footer">
-    © <span id="y"></span> Sebastian Diaz‑Tafel • <a href="mailto:spdt918@gmail.com">spdt918@gmail.com</a>
+    © <span id="y"></span> Sebastian Diaz-Tafel • <a href="mailto:spdt918@gmail.com">spdt918@gmail.com</a>
   </footer>
 </div>
 <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
