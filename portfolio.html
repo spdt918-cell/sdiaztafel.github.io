@@ -84,6 +84,42 @@
     .page-intro h1 { margin: 0 0 8px; }
     .page-intro p { color: var(--muted); margin: 0; font-size: .95rem; line-height: 1.65; }
     .brand img { background: #0e7490; }
+
+    /* ── Certifications grid ── */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 14px;
+      margin-top: 4px;
+    }
+    .cert-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .cert-card img {
+      width: 52px;
+      height: 52px;
+      border-radius: 8px;
+      object-fit: contain;
+      background: var(--chip);
+      flex-shrink: 0;
+    }
+    .cert-card-body { display: flex; flex-direction: column; gap: 3px; }
+    .cert-card-name { font-size: .92rem; font-weight: 700; color: var(--text); }
+    .cert-card-issuer { font-size: .8rem; color: var(--muted); }
+    .cert-card-date { font-size: .78rem; color: var(--muted); }
+    .cert-card-link {
+      font-size: .78rem;
+      color: var(--accent);
+      margin-top: 2px;
+      display: inline-block;
+    }
+    .cert-card-link:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -206,6 +242,25 @@
         </article>
 
         <article class="card">
+          <h3>Grammy Awards — Website Performance Analysis</h3>
+          <div class="card-tags">
+            <span class="tag">Python</span>
+            <span class="tag">pandas</span>
+            <span class="tag">Web Analytics</span>
+          </div>
+          <p class="card-story">
+            Used Python to analyze Grammy and Recording Academy web traffic before and after a 2022
+            domain split. Measured bounce rate, pages per session, and session duration to determine
+            whether separating the two sites improved engagement.
+            Found that <strong>the split created two distinct audience profiles</strong> with
+            meaningfully different behavior, and built a recommendation from the data.
+          </p>
+          <div class="actions">
+            <a class="chip" href="grammys.html">View Project</a>
+          </div>
+        </article>
+
+        <article class="card">
           <h3>Lockheed Martin — 10-K Mini Analysis</h3>
           <div class="card-tags">
             <span class="tag">Financial Analysis</span>
@@ -288,6 +343,57 @@
             <a class="chip" href="https://spdt918-cell.github.io/webproject/" target="_blank" rel="noopener">View Site</a>
           </div>
         </article>
+
+      </div>
+    </div>
+
+    <!-- CERTIFICATIONS -->
+    <div class="work-group" id="certifications">
+      <div class="work-group-header">
+        <span class="section-label">Certifications</span>
+        <span>Credentials from hands-on project-based programs</span>
+      </div>
+      <div class="cert-grid">
+
+        <div class="cert-card">
+          <img src="img/sql_cert.png" alt="SQL for Data Analysis badge" />
+          <div class="cert-card-body">
+            <span class="cert-card-name">SQL for Data Analysis</span>
+            <span class="cert-card-issuer">Global Career Accelerator · Intel</span>
+            <span class="cert-card-date">Issued May 2025</span>
+            <a class="cert-card-link" href="https://www.credential.net/c2eef316-ad48-4fb8-9307-15c15a381be4#acc.vykzldYH" target="_blank" rel="noopener">View Credential ↗</a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <img src="img/python_cert.png" alt="Python and Data badge" />
+          <div class="cert-card-body">
+            <span class="cert-card-name">Python &amp; Data</span>
+            <span class="cert-card-issuer">Global Career Accelerator · Grammy Awards</span>
+            <span class="cert-card-date">Issued May 2026</span>
+            <a class="cert-card-link" href="https://www.credential.net/97b9d763-7e92-49d7-94a9-0d74dcc61281#acc.Ionb2KN3" target="_blank" rel="noopener">View Credential ↗</a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <img src="img/ai_cert.png" alt="AI Professional Skills badge" />
+          <div class="cert-card-body">
+            <span class="cert-card-name">AI Professional Skills</span>
+            <span class="cert-card-issuer">Global Career Accelerator · OpenAI</span>
+            <span class="cert-card-date">Issued May 2026</span>
+            <a class="cert-card-link" href="https://www.credential.net/e2cc8287-d110-44d1-a71f-a9e02488f3a0#acc.tVMAbhiF" target="_blank" rel="noopener">View Credential ↗</a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <img src="img/intl_cert.png" alt="Intercultural Skills badge" />
+          <div class="cert-card-body">
+            <span class="cert-card-name">Intercultural Skills</span>
+            <span class="cert-card-issuer">Global Career Accelerator · UNESCO</span>
+            <span class="cert-card-date">Issued May 2026</span>
+            <a class="cert-card-link" href="https://www.credential.net/89373909-fa38-48b8-9684-ed69a221d668#acc.yE48LNac" target="_blank" rel="noopener">View Credential ↗</a>
+          </div>
+        </div>
 
       </div>
     </div>
